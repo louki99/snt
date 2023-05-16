@@ -30,10 +30,41 @@
                 </div>
             </div>
             <div class="app-main__outer">
-               this is content
+                <div class="app-main__inner">
+                    @yield('content')
+                </div>
             </div>
         </div>
     </div>
+
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/37.1.0/classic/ckeditor.js"></script>
+
+    <script>
+        ClassicEditor
+            .create(document.querySelector('.editor'), {
+                ckfinder: {
+                    uploadUrl: '{{ route('ckfinder.upload').'?_token='.csrf_token() }}'
+                },
+                toolbar: {
+                    items: [
+                        'undo', 'redo',
+                        '|', 'heading',
+                        '|', 'fontfamily', 'fontsize', 'fontColor', 'fontBackgroundColor',
+                        '|', 'bold', 'italic', 'strikethrough', 'subscript', 'superscript', 'code',
+                        '|', 'alignment',
+                        'link', 'uploadImage', 'blockQuote', 'codeBlock',
+                        '|', 'bulletedList', 'numberedList', 'todoList', 'outdent', 'indent'
+                    ],
+                    shouldNotGroupWhenFull: true
+                }
+
+
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
 
     <script type="text/javascript" src="{{ asset('js/master.js') }}"></script>
 

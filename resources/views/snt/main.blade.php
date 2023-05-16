@@ -23,6 +23,25 @@
             --primary-font: 'Poppins', sans-serif;
             --color-muted : #000;
         }
+
+        .editor p{
+            font-size: 1.1rem;
+            /* text-align: center; */
+            line-height: 1.75;
+        }
+
+        .editor figure{
+            margin-bottom: 30px !important;
+            margin: auto;
+        }
+
+        .editor figure img {
+            border-radius: 10px;
+            max-width: 100%;
+        }
+        .container p {
+            font-size: 1rem;
+        }
     </style>
 
 </head>
