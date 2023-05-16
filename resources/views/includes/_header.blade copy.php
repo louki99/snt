@@ -87,47 +87,70 @@
             <div class="main-nav d-none d-lg-block float-left">
                 <nav>
                     <ul class="main-menu d-none d-lg-inline font-small">
-                        <li><a class="link" href="#">Home</a></li>
-                        <li>
-                            <a class="link" href="#">Domaines</a>
+                        <li class="menu-item-has-children">
+                            <a href="https://stories.botble.com/"><i
+                                    class="elegant-icon mr-5 elegant-icon icon_house_alt mr-5"></i> Home </a>
                             <ul class="sub-menu text-muted font-small">
-                                <li>
-                                    <a class="link" href="#">ElementL</a>
-                                    <ul>
-                                        <li><a class="link" href="#">Sub element</a></li>
-                                        <li><a class="link" href="#">Sub element</a></li>
-                                        <li><a class="link" href="#">Sub element</a></li>
-                                        <li><a class="link" href="#">Sub element</a></li>
-                                        <li>
-                                            <a class="link" href="#">more</a>
-                                            <ul>
-                                                <li>
-                                                    <a class="link" href="#">Sub element</a>
-                                                    <ul>
-                                                        <li><a class="link" href="#">and even more</a></li>
-                                                        <li><a class="link" href="#">and even more</a></li>
-                                                        <li><a class="link" href="#">and even more</a></li>
-                                                        <li><a class="link" href="#">and even more</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a class="link" href="#">and more</a></li>
-                                            </ul>
-                                        </li>
+                                <li class=" "><a href="https://stories.botble.com/"> Home default </a></li>
+                                <li class=" "><a href="https://stories.botble.com/home-2"> Home 2 </a></li>
+                                <li class=" "><a href="https://stories.botble.com/home-3"> Home 3 </a></li>
+                                <li class="menu-item-has-children">
+                                    <a href="https://stories.botble.com/"><i
+                                        class="elegant-icon mr-5 elegant-icon icon_house_alt mr-5"></i> Home </a>
+                                    <ul class="sub-menu text-muted font-small">
+                                        <li class=" "><a href="#"> Item </a></li>
+                                        <li class=" "><a href="#"> Item </a></li>
+                                        <li class=" "><a href="#"> Item </a></li>
                                     </ul>
                                 </li>
-                                <li><a class="link" href="#">Multimedia</a></li>
-                                <li><a class="link" href="#">HTML Tables</a></li>
                             </ul>
                         </li>
-                        <li><a class="link" href="#">CSS</a></li>
-                        <li><a class="link" href="#">JavaScript</a>
-                            <ul>
-                                <li><a class="link" href="#">JavaScript Objects</a></li>
-                                <li><a class="link" href="#">Asynchronous JavaScript</a></li>
-                                <li><a class="link" href="#">Client-side web APIs</a></li>
-
+                        <li class=" "><a href="https://stories.botble.com/travel"> Travel </a></li>
+                        <li class=" "><a href="https://stories.botble.com/destination"> Destination </a></li>
+                        <li class=" "><a href="https://stories.botble.com/hotels"> Hotels </a></li>
+                        <li class=" "><a href="https://stories.botble.com/lifestyle"> Lifestyle </a></li>
+                        <li class=" "><a href="https://stories.botble.com/blog"> Blog </a></li>
+                        <li class=" "><a href="https://stories.botble.com/galleries"> Galleries </a></li>
+                        <li class="menu-item-has-children">
+                            <a href="https://stories.botble.com/blog"> Blog layouts </a>
+                            <ul class="sub-menu text-muted font-small">
+                                <li class=" "><a href="https://stories.botble.com/blog-grid-layout"> Grid layout
+                                    </a></li>
+                                <li class=" "><a href="https://stories.botble.com/blog-list-layout"> List layout
+                                    </a></li>
+                                <li class=" "><a href="https://stories.botble.com/blog-big-layout"> Big layout
+                                    </a></li>
                             </ul>
                         </li>
+                        <li class=" "><a href="https://stories.botble.com/contact"> Contact </a></li>
+                    </ul>
+                    <ul class="d-block d-lg-none text-muted" id="mobile-menu" data-label="Menu">
+                        <li class="menu-item-has-children">
+                            <a href="https://stories.botble.com/">
+                                <i class="elegant-icon mr-5 elegant-icon icon_house_alt mr-5"></i> Home </a>
+                            <ul class="sub-menu text-muted font-small">
+                                <li class=" "><a href="https://stories.botble.com/"> Home default </a></li>
+                                <li class=" "><a href="https://stories.botble.com/home-2"> Home 2 </a></li>
+                            </ul>
+                        </li>
+                        <li class=" "><a href="https://stories.botble.com/travel"> Travel </a></li>
+                        <li class=" "><a href="https://stories.botble.com/destination"> Destination </a></li>
+                        <li class=" "><a href="https://stories.botble.com/hotels"> Hotels </a></li>
+                        <li class=" "><a href="https://stories.botble.com/lifestyle"> Lifestyle </a></li>
+                        <li class=" "><a href="https://stories.botble.com/blog"> Blog </a></li>
+                        <li class=" "><a href="https://stories.botble.com/galleries"> Galleries </a></li>
+                        <li class="menu-item-has-children">
+                            <a href="https://stories.botble.com/blog"> Blog layouts </a>
+                            <ul class="sub-menu text-muted font-small">
+                                <li class=" "><a href="https://stories.botble.com/blog-grid-layout"> Grid layout
+                                    </a></li>
+                                <li class=" "><a href="https://stories.botble.com/blog-list-layout"> List layout
+                                    </a></li>
+                                <li class=" "><a href="https://stories.botble.com/blog-big-layout"> Big layout
+                                    </a></li>
+                            </ul>
+                        </li>
+                        <li class=" "><a href="https://stories.botble.com/contact"> Contact </a></li>
                     </ul>
                 </nav>
             </div>
