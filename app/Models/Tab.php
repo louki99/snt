@@ -17,4 +17,10 @@ class Tab extends Model implements HasMedia
         'title',
         'content',
     ];
+
+
+    public function page()
+    {
+        return $this->belongsTo(Page::class);
+    }
 }

@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('tabs', function (Blueprint $table) {
-            $table->unsignedBigInteger('page_id')->nullable();
-            $table->foreign('page_id')->references('id')->on('pages');
+        Schema::table('pages', function (Blueprint $table) {
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->foreign('category_id')->references('id')->on('category');
         });
     }
 
@@ -22,9 +22,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('tabs', function (Blueprint $table) {
-            $table->dropForeign(['page_id']);
-            $table->dropColumn('page_id');
+        Schema::table('pages', function (Blueprint $table) {
+            $table->dropForeign(['category_id']);
+            $table->dropColumn('category_id');
         });
     }
 };

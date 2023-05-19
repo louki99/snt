@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\TabController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,10 @@ Route::get('/', function () {
 
 Route::get('/page/{slug}', [PageController::class,'page'])->name('pages.show');
 
+Route::get('/pages/maladies', [PageController::class,'maladies'])->name('pages.maladies');
+
+Route::get('/pages/maladies/{slug}', [PageController::class,'maladie'])->name('pages.get.maladie');
+
 Route::group(['prefix' => 'dashboard'], function () {
     Route::get('/', [AdminController::class,'index'])->name('backend.index');
 
@@ -40,6 +45,12 @@ Route::group(['prefix' => 'dashboard'], function () {
         Route::get('/add', [PageController::class,'add'])->name('pages.add');
         Route::post('/store', [PageController::class,'store'])->name('pages.store');
     });
+
+    Route::group(['prefix' => 'categories'], function () {
+        Route::get('/', [CategoryController::class,'index'])->name('categories.add');
+        Route::post('/store', [CategoryController::class,'store'])->name('category.store');
+    });
+
 });
 
 

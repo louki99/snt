@@ -5,11 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Tab;
+use App\Models\Page;
 
 class TabController extends Controller
 {
     public function add() {
-        return view("backend.tabs.add");
+
+        $pages = Page::select('id','title','slug')->get();
+
+        return view("backend.tabs.add",compact('pages'));
     }
 
     public function store(Request $request) {
@@ -25,7 +29,7 @@ class TabController extends Controller
             $tab->addMedia($image)->toMediaCollection('gtabs');
         }
 
-        return back()->withSuccess('Page(tab) added success!');
+        return back()->withSuccess('Tab added success!');
 
     }
 
@@ -45,7 +49,6 @@ class TabController extends Controller
             $request->file('upload')->move(public_path('media'), $fileName);
             $url = asset('media/'.$fileName);
             return response()->json(['fileName' => $fileName, 'uploaded' => 1, 'url' => $url]);
-            }
-
+        }
     }
 }

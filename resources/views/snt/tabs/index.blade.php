@@ -30,8 +30,6 @@
                 @endforeach
             </div>
 
-
-
             <div class="editor">
                 {!! $tab->content !!}
             </div>

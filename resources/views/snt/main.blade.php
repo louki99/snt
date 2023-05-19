@@ -9,15 +9,14 @@
     <script src="{{ asset("js/wow.min.js") }}"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.0.8/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
-
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.0.8/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script> --}}
 
     @vite(['resources/js/app.js'])
 
     <style>
         :root {
-            --color-primary: #1a9002;
+            --color-primary: #e3363e;
             --color-secondary: #2d3d8b;
             --color-danger: #e3363e;
             --primary-font: 'Poppins', sans-serif;
@@ -40,7 +39,15 @@
             max-width: 100%;
         }
         .container p {
-            font-size: 1rem;
+            /* font-size: 1rem; */
+            line-height: 2;
+        }
+
+        p img {
+            border-radius: 5px;
+            margin-right: 5px;
+            width: 230px !important;
+            height: 230px !important;
         }
     </style>
 
@@ -52,11 +59,12 @@
     @include('includes.search')
 
     <main>
-        <div class="container" style="transform: none;">
+        <div class="container-fluid" style="transform: none;">
             @yield('content')
         </div>
     </main>
 
     @include('includes.footer')
+
 </body>
 </html>

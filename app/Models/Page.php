@@ -17,9 +17,19 @@ class Page extends Model implements HasMedia
 
     protected $fillable = [
         "title",
-        "slug",
-        "description",
-        "content",
+        "definition",
+        "inspiction",
+        "act",
         "published"
     ];
+
+    public function tabs()
+    {
+        return $this->hasMany(Tab::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

@@ -15,9 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string("title");
             $table->string("slug");
-            $table->text("description");
-            $table->text("content");
-            $table->integer("published");
+
+            $table->longText("definition")->nullable();
+            $table->longText("inspiction")->nullable();
+            $table->longText("act")->nullable();
+            $table->integer("published")->default(1);
             $table->timestamps();
         });
     }

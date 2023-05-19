@@ -29,15 +29,23 @@
 
             <div class="form-group">
                 <label>Content</label>
-                <textarea class="editor"  name="content"></textarea>
-
+                {{-- <textarea class="editor"  name="content"></textarea> --}}
+                <textarea id="summernote" name="content"></textarea>
             </div>
 
             <div class="form-group">
-                <label for="gallaryImage">Gallary images</label>
-                <input type="file" name="images[]" multiple id="gallaryImage"/>
+                <label for="gallaryImage">Images</label>
+                <input type="file" name="images[]" multiple id="gallaryImage" class="form-control"/>
             </div>
 
+            <div class="form-group">
+                <label for="gallaryImage">Page</label>
+                <select name="page" id="page" class="form-control">
+                   @foreach ($pages as $page)
+                        <option value="{{ $page->id }}">{{ $page->title }}</option>
+                   @endforeach
+                </select>
+            </div>
 
             <div class="form-group text-center">
                 <button type="submit" class="btn btn-success btn-block">Publish</button>

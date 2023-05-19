@@ -23,28 +23,41 @@
             @csrf
 
             <div class="form-group">
-                <label>Title</label>
+                <label>Titre</label>
                 <input type="text" name="title" class="form-control" />
             </div>
 
             <div class="form-group">
-                <label>Description</label>
-                <textarea class="form-control"  name="description"></textarea>
+                <label>Définition</label>
+                <textarea class="summernote" name="definition"></textarea>
             </div>
 
             <div class="form-group">
-                <label>Content</label>
-                <textarea class="editor"  name="content"></textarea>
+                <label>Inspection</label>
+                <textarea class="summernote" name="inspiction"></textarea>
             </div>
 
             <div class="form-group">
-                <label for="gallaryImage">Images</label>
-                <input type="file" name="images[]" multiple id="gallaryImage"/>
+                <label for="gallaryImage">Photos</label>
+                <input type="file" name="images[]" multiple id="gallaryImage" class="form-control" />
             </div>
 
+            <div class="form-group">
+                <label>Conduite à tenir</label>
+                <textarea class="summernote" name="act"></textarea>
+            </div>
 
-            <div class="form-group text-center">
-                <button type="submit" class="btn btn-success btn-block">Publish</button>
+            <div class="form-group">
+                <label>Catégorie</label>
+                <select name="category" id="category" class="form-control">
+                    @foreach ($categories as $cat)
+                        <option value="{{ $cat->id  }}">{{$cat->name}}</option>
+                    @endforeach
+                </select>
+            </div>
+
+            <div class="form-group text-left">
+                <button type="submit" class="btn btn-primary">Sauvegarder la modification</button>
             </div>
 
         </form>

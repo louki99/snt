@@ -10,7 +10,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="this is content">
     <meta name="msapplication-tap-highlight" content="no">
+
     <link href="{{ asset('css/master.css') }}" rel="stylesheet">
+
+
+    <link   href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet">
+    <script src="{{ asset("js/jquery-3.5.1.min.js") }}"></script>
+    <script src="{{ asset("js/bootstrap.min.js") }}"></script>
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+
+    <style>
+        .modal-backdrop{
+            z-index: 0;
+        }
+        .note-modal .modal-dialog{
+            margin-top: 100px;
+            z-index: 9;
+        }
+        select#page {
+            font-size: 12px;
+        }
+        .app-page-title .page-title-subheading{
+            font-size: 1.1rem !important;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function() {
+            $('.summernote').summernote({
+                tabsize: 2,
+                height: 100
+            });
+        });
+    </script>
+
 </head>
 
 <body>
@@ -38,7 +75,7 @@
     </div>
 
 
-    <script src="https://cdn.ckeditor.com/ckeditor5/37.1.0/classic/ckeditor.js"></script>
+    {{-- <script src="https://cdn.ckeditor.com/ckeditor5/37.1.0/classic/ckeditor.js"></script>
 
     <script>
         ClassicEditor
@@ -64,7 +101,7 @@
             .catch(error => {
                 console.error(error);
             });
-    </script>
+    </script> --}}
 
     <script type="text/javascript" src="{{ asset('js/master.js') }}"></script>
 

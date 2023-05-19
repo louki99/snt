@@ -88,8 +88,9 @@
                 <nav>
                     <ul class="main-menu d-none d-lg-inline font-small">
                         <li><a class="link" href="#">Home</a></li>
-                        <li>
-                            <a class="link" href="#">Domaines</a>
+                        <li><a class="link" href="{{ route("pages.show",'inspection-ante-mortem') }}">Inspection ante-mortem</a></li>
+                        {{-- <li>
+                            <a class="link" href="#">Inspection ante-mortem</a>
                             <ul class="sub-menu text-muted font-small">
                                 <li>
                                     <a class="link" href="#">ElementL</a>
@@ -118,16 +119,46 @@
                                 <li><a class="link" href="#">Multimedia</a></li>
                                 <li><a class="link" href="#">HTML Tables</a></li>
                             </ul>
-                        </li>
-                        <li><a class="link" href="#">CSS</a></li>
-                        <li><a class="link" href="#">JavaScript</a>
+                        </li> --}}
+                        <li><a class="link" href="#">Inspection post-mortem</a>
                             <ul>
-                                <li><a class="link" href="#">JavaScript Objects</a></li>
-                                <li><a class="link" href="#">Asynchronous JavaScript</a></li>
-                                <li><a class="link" href="#">Client-side web APIs</a></li>
+                                <li><a class="link" href="#">Détermination de l'âge et du sexe</a>
+                                    <ul>
+                                        <li><a class="link" href="#">Estimation de l'âge</a></li>
+                                        <li><a class="link" href="#">Estimation du sexe</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="link" href="#">Diagnose</a></li>
+                                <li><a class="link" href="#">Inspection sanitaire</a></li>
+                                <li><a class="link" href="#">Modalités de l'inspection qualitative</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="link" href="#">Motif de saisie</a>
+                            <ul>
+                                <li><a class="link" href="#">Viandes cadavériques</a></li>
+                                <li><a class="link" href="#">Viandes insuffisantes</a>
+                                    <ul>
+                                        <li><a class="link" href="#">Viandes gélatineuses</a></li>
+                                        <li><a class="link" href="#">Viandes infiltrées</a></li>
+                                        <li><a class="link" href="#">Viandes maigres, amyotrophiques et cachectiques</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="link" href="#">Viandes issues d'abattage défectueux</a></li>
+                                <li><a class="link" href="#">Viandes répugnantes</a></li>
+                                <li><a class="link" href="#">Viandes toxiques</a></li>
+                                <li><a class="link" href="#">Viandes virulentes</a>
+                                    <ul>
+                                        <li><a class="link" href="#">Affections parasitaires</a></li>
+                                        <li><a class="link" href="#">Viandes dangereuses</a></li>
+                                        <li><a class="link" href="#">Viandes issues d'animaux atteints de MRLC</a></li>
+                                        <li><a class="link" href="#">Viandes issues d'animaux non atteints de MRLC</a></li>
+                                    </ul>
+                                </li>
 
                             </ul>
                         </li>
+                        <li><a class="link" href="#">Réglementation</a></li>
+
                     </ul>
                 </nav>
             </div>
