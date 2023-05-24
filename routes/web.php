@@ -64,6 +64,8 @@ Route::get('/pages/arateristiques-techniques-lestampillage/show/{slug}', [PageCo
 Route::get('/pages/classification-carcasses/{slug}', [PageController::class,'classificationCarcasses'])->name('pages.classification.carcasses');
 Route::get('/pages/classification-carcasses/show/{slug}', [PageController::class,'showclassificationCarcasses'])->name('show.classification.carcasses');
 
+Route::get('/pages/viandes-gelatineuses/{slug}', [PageController::class,'viandesGelatineuses'])->name('pages.viandes.gelatineuses');
+Route::get('/pages/viandes-gelatineuses/show/{slug}', [PageController::class,'showcviandesGelatineuses'])->name('show.viandes.gelatineuses');
 
 Route::get('/pages/sant-animale/{slug}', [PageController::class,'santeAnimale'])->name('pages.sant.animale');
 

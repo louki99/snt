@@ -8,14 +8,19 @@
 
     <script src="{{ asset("js/wow.min.js") }}"></script>
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{{ asset("js/jquery.min.js") }}"></script>
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.0.8/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script> --}}
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script> --}}
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="{{ asset("js/jquery.fancybox.min.js") }}"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+    <link rel="stylesheet" href="{{ asset("css/jquery.fancybox.css") }}">
+
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css"> --}}
+
+    <link href="https://fonts.cdnfonts.com/css/open-sans" rel="stylesheet">
 
     @vite(['resources/js/app.js'])
 
@@ -24,13 +29,19 @@
             --color-primary: #e3363e;
             --color-secondary: #2d3d8b;
             --color-danger: #e3363e;
-            --primary-font: 'Poppins', sans-serif;
+            --primary-font: 'Open Sans', sans-serif;
             --color-muted : #000;
+
+        }
+
+        *{
+            /* font-family: 'Open Sans', sans-serif; */
+            /* font-family: 'Open Sans Light', sans-serif; */
+            font-family: 'Open Sans Condensed', sans-serif;
         }
 
         .editor p{
             font-size: 1.1rem;
-            /* text-align: center; */
             line-height: 1.75;
         }
 
@@ -59,6 +70,7 @@
             padding: 10px !important;
             font-family: inherit;
         }
+
         a{
             text-decoration: none !important;
         }

@@ -275,7 +275,17 @@ class PageController extends Controller
         return view("snt.pages.ClassificationCarcasses.show",[ 'page'=>$page,'menu'=>$menu]);
     }
 
+    public function viandesGelatineuses($slug) {
+        $page = Page::where('slug', $slug)->first();
+        $menu = Page::where('parent_id', $page->id)->select('title','slug')->get();
+        return view("snt.pages.ViandesGelatineuses.index",[ 'page'=>$page,'menu'=>$menu ]);
+    }
+    public function showcviandesGelatineuses($slug) {
+        $page = Page::where('slug', $slug)->first();
+        $menu = Page::where('parent_id', $page->parent_id)->select('title','slug')->get();
 
+        return view("snt.pages.ViandesGelatineuses.show",[ 'page'=>$page,'menu'=>$menu]);
+    }
 
 
 }

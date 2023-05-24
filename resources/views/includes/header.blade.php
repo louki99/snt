@@ -154,8 +154,8 @@
                                 <li><a class="link" href="{{ route("pages.show","viandes-cadaveriques") }}">Viandes cadavériques</a></li>
                                 <li><a class="link" href="#">Viandes insuffisantes</a>
                                     <ul>
-                                        <li><a class="link" href="{{ route("pages.show","viandes-gelatineuses") }}">Viandes gélatineuses</a></li>
-                                        <li><a class="link" href="#">Viandes infiltrées</a></li>
+                                        <li><a class="link" href="{{ route("pages.viandes.gelatineuses","viandes-gelatineuses") }}">Viandes gélatineuses</a></li>
+                                        <li><a class="link" href="{{ route("pages.show","viandes-infiltrees") }}">Viandes infiltrées</a></li>
                                         <li><a class="link" href="#">Viandes maigres, amyotrophiques et cachectiques</a></li>
                                     </ul>
                                 </li>

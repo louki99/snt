@@ -1,6 +1,16 @@
 import './bootstrap';
 
 
+import '../theme/css/vendor/bootstrap.min.css';
+import '../theme/css/vendor/owl.carousel.min.css';
+import '../theme/css/vendor/ticker-style.css';
+import '../theme/css/vendor/elegant-icons.css';
+import '../theme/css/vendor/slick.css';
+import '../theme/css/vendor/slicknav.css';
+import '../theme/css/vendor/animate.min.css';
+import '../theme/css/vendor/nice-select.css';
+import '../theme/css/vendor/perfect-scrollbar.css';
+
 import '../theme/css/style.css';
 import '../theme/css/subMenu.css';
 import '../theme/css/widgets.css';
@@ -25,7 +35,6 @@ import '../theme/js/vendor/perfect-scrollbar';
 import '../theme/js/vendor/jquery.waypoints.min';
 import '../theme/js/vendor/jquery.theia.sticky';
 import '../theme/js/vendor/jquery.slicknav';
-import '../theme/js/vendor/slick.min';
 import '../theme/js/vendor/bootstrap.min';
 
 import '../theme/js/main';
