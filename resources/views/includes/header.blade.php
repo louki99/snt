@@ -136,13 +136,13 @@
                                 </li>
                                 <li><a class="link" href="#">Détermination de l'âge et du sexe</a>
                                     <ul>
-                                        <li><a class="link" href="#">Estimation de l'âge</a></li>
-                                        <li><a class="link" href="#">Estimation du sexe</a></li>
+                                        <li><a class="link" href="{{ route('pages.estimation.age',"estimation-de-lage") }}">Estimation de l'âge</a></li>
+                                        <li><a class="link" href="{{ route('pages.estimation.sexe',"estimation-du-sexe") }}">Estimation du sexe</a></li>
                                     </ul>
                                 </li>
                                 <li><a class="link" href="#">Modalités de l'inspection qualitative</a>
                                     <ul class="dbm">
-                                        <li><a class="link" href="#">Les critères de la classification</a></li>
+                                        <li><a class="link" href="{{ route('pages.show',"criteres-de-la-classification") }}">Les critères de la classification</a></li>
                                         <li><a class="link" href="#">Les caratéristiques techniques de l'estampillage</a></li>
                                         <li><a class="link" href="#">La classification des carcasses</a></li>
                                     </ul>

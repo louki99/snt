@@ -52,6 +52,11 @@ Route::get('/pages/configuration-anatomique/show/{slug}', [PageController::class
 Route::get('/pages/fressure/{slug}', [PageController::class,'fressure'])->name('pages.fressure');
 Route::get('/pages/fressure/show/{slug}', [PageController::class,'showFressure'])->name('show.fressure');
 
+Route::get('/pages/estimation-la-age/{slug}', [PageController::class,'estimationAge'])->name('pages.estimation.age');
+Route::get('/pages/estimation-la-age/show/{slug}', [PageController::class,'showEstimationAge'])->name('show.estimation.age');
+
+Route::get('/pages/estimation-du-sexe/{slug}', [PageController::class,'estimationSexe'])->name('pages.estimation.sexe');
+Route::get('/pages/estimation-du-sexe/show/{slug}', [PageController::class,'showEstimationSexe'])->name('show.estimation.sexe');
 
 
 Route::get('/pages/sant-animale/{slug}', [PageController::class,'santeAnimale'])->name('pages.sant.animale');
