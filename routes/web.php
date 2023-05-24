@@ -58,6 +58,12 @@ Route::get('/pages/estimation-la-age/show/{slug}', [PageController::class,'showE
 Route::get('/pages/estimation-du-sexe/{slug}', [PageController::class,'estimationSexe'])->name('pages.estimation.sexe');
 Route::get('/pages/estimation-du-sexe/show/{slug}', [PageController::class,'showEstimationSexe'])->name('show.estimation.sexe');
 
+Route::get('/pages/arateristiques-techniques-lestampillage/{slug}', [PageController::class,'arateristiquesTechniquesLestampillage'])->name('pages.arateristiques.techniques.lestampillage');
+Route::get('/pages/arateristiques-techniques-lestampillage/show/{slug}', [PageController::class,'showarateristiquesTechniquesLestampillage'])->name('show.arateristiques.techniques.lestampillage');
+
+Route::get('/pages/classification-carcasses/{slug}', [PageController::class,'classificationCarcasses'])->name('pages.classification.carcasses');
+Route::get('/pages/classification-carcasses/show/{slug}', [PageController::class,'showclassificationCarcasses'])->name('show.classification.carcasses');
+
 
 Route::get('/pages/sant-animale/{slug}', [PageController::class,'santeAnimale'])->name('pages.sant.animale');
 

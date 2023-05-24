@@ -143,18 +143,18 @@
                                 <li><a class="link" href="#">Modalités de l'inspection qualitative</a>
                                     <ul class="dbm">
                                         <li><a class="link" href="{{ route('pages.show',"criteres-de-la-classification") }}">Les critères de la classification</a></li>
-                                        <li><a class="link" href="#">Les caratéristiques techniques de l'estampillage</a></li>
-                                        <li><a class="link" href="#">La classification des carcasses</a></li>
+                                        <li><a class="link" href="{{ route('pages.arateristiques.techniques.lestampillage',"carateristiques-techniques-de-lestampillage") }}">Les caratéristiques techniques de l'estampillage</a></li>
+                                        <li><a class="link" href="{{ route('pages.classification.carcasses',"classification-des-carcasses") }}">La classification des carcasses</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
                         <li  class="li"><a class="link" href="#">Motif de saisie</a>
                             <ul class="sbm">
-                                <li><a class="link" href="#">Viandes cadavériques</a></li>
+                                <li><a class="link" href="{{ route("pages.show","viandes-cadaveriques") }}">Viandes cadavériques</a></li>
                                 <li><a class="link" href="#">Viandes insuffisantes</a>
                                     <ul>
-                                        <li><a class="link" href="#">Viandes gélatineuses</a></li>
+                                        <li><a class="link" href="{{ route("pages.show","viandes-gelatineuses") }}">Viandes gélatineuses</a></li>
                                         <li><a class="link" href="#">Viandes infiltrées</a></li>
                                         <li><a class="link" href="#">Viandes maigres, amyotrophiques et cachectiques</a></li>
                                     </ul>

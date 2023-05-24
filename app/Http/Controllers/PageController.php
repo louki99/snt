@@ -250,4 +250,32 @@ class PageController extends Controller
         return view("snt.pages.EstimationSexe.show",[ 'page'=>$page,'menu'=>$menu]);
     }
 
+    public function arateristiquesTechniquesLestampillage($slug) {
+        $page = Page::where('slug', $slug)->first();
+        $menu = Page::where('parent_id', $page->id)->select('title','slug')->get();
+        return view("snt.pages.ArateristiquesTechniquesLestampillage.index",[ 'page'=>$page,'menu'=>$menu ]);
+    }
+    public function showarateristiquesTechniquesLestampillage($slug) {
+        $page = Page::where('slug', $slug)->first();
+        $menu = Page::where('parent_id', $page->parent_id)->select('title','slug')->get();
+
+        return view("snt.pages.ArateristiquesTechniquesLestampillage.show",[ 'page'=>$page,'menu'=>$menu]);
+    }
+
+
+    public function classificationCarcasses($slug) {
+        $page = Page::where('slug', $slug)->first();
+        $menu = Page::where('parent_id', $page->id)->select('title','slug')->get();
+        return view("snt.pages.ClassificationCarcasses.index",[ 'page'=>$page,'menu'=>$menu ]);
+    }
+    public function showclassificationCarcasses($slug) {
+        $page = Page::where('slug', $slug)->first();
+        $menu = Page::where('parent_id', $page->parent_id)->select('title','slug')->get();
+
+        return view("snt.pages.ClassificationCarcasses.show",[ 'page'=>$page,'menu'=>$menu]);
+    }
+
+
+
+
 }
