@@ -40,6 +40,9 @@ Route::get('/pages/modalite-espece/show/{slug}', [PageController::class,'showMod
 Route::get('/pages/examen-rapproche/{slug}', [PageController::class,'examenRapproche'])->name('pages.examen.rapproche');
 Route::get('/pages/examen-rapproche/show/{slug}', [PageController::class,'showExamenRapproche'])->name('show.examen.rapproche');
 
+Route::get('/pages/partie-thoracique/{slug}', [PageController::class,'partieThoracique'])->name('pages.partie.thoracique');
+Route::get('/pages/partie-thoracique/show/{slug}', [PageController::class,'showPartieThoracique'])->name('show.partie.thoracique');
+
 
 
 Route::get('/pages/sant-animale/{slug}', [PageController::class,'santeAnimale'])->name('pages.sant.animale');

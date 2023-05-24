@@ -161,12 +161,28 @@ class PageController extends Controller
         return view("snt.pages.ExamenRapproche.index",[ 'page'=>$page,'menu'=>$menu ]);
     }
 
-
     public function showExamenRapproche($slug) {
         $page = Page::where('slug', $slug)->first();
         $menu = Page::where('parent_id', $page->parent_id)->select('title','slug')->get();
 
         return view("snt.pages.ExamenRapproche.show",[ 'page'=>$page,'menu'=>$menu]);
     }
+
+    public function partieThoracique($slug) {
+        $page = Page::where('slug', $slug)->first();
+        $menu = Page::where('parent_id', $page->id)->select('title','slug')->get();
+        return view("snt.pages.PartieThoracique.index",[ 'page'=>$page,'menu'=>$menu ]);
+    }
+
+    public function showPartieThoracique($slug) {
+        $page = Page::where('slug', $slug)->first();
+        $menu = Page::where('parent_id', $page->parent_id)->select('title','slug')->get();
+
+        return view("snt.pages.PartieThoracique.show",[ 'page'=>$page,'menu'=>$menu]);
+    }
+
+
+
+
 
 }
