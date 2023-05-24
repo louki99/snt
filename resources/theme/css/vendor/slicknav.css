@@ -5,7 +5,6 @@
  */
 .slicknav_btn{position:relative;display:block;vertical-align:middle;float:left;padding:0.438em 0.625em 0.438em 0.625em;line-height:1.125em;cursor:pointer;}
 .slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar{margin-top:0.188em;}
-.slicknav_menu{*zoom:1;}
 .slicknav_menu .slicknav_icon:before{background:transparent;display:block;content:"";position:absolute;}
 .slicknav_menu .slicknav_no-text{margin:0;}
 .slicknav_menu .slicknav_icon-bar{display:block;}
@@ -38,7 +37,7 @@ margin:2px 5px;}
 
 /*Menu icon*/
 .menu-text{margin-top:2px;display:inline-block;}
-.menu-icon{height:;position:relative;display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;z-index:2;background:none;cursor:pointer;-webkit-transition:all 0.5s cubic-bezier(0.175,0.885,0.32,1.275);transition:all 0.5s cubic-bezier(0.175,0.885,0.32,1.275);float:left;}
+.menu-icon{position:relative;display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;z-index:2;background:none;cursor:pointer;-webkit-transition:all 0.5s cubic-bezier(0.175,0.885,0.32,1.275);transition:all 0.5s cubic-bezier(0.175,0.885,0.32,1.275);float:left;}
 .menu-icon:hover{background:none;}
 .menu-icon-inner{position:relative;height:2px;width:22px;background:var(--color-muted)!important;margin-top:10px;}
 .menu-icon-inner:before{content:"";position:absolute;top:-6px;left:0;height:2px;width:100%;background:var(--color-muted)!important;}

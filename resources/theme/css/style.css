@@ -31,7 +31,7 @@ TABLE CONTENT
 ***/
 
 /* Import third party CSS library */
-/* @import url(vendor/bootstrap.min.css);
+@import url(vendor/bootstrap.min.css);
 @import url(vendor/owl.carousel.min.css);
 @import url(vendor/ticker-style.css);
 @import url(vendor/elegant-icons.css);
@@ -39,7 +39,7 @@ TABLE CONTENT
 @import url(vendor/slicknav.css);
 @import url(vendor/animate.min.css);
 @import url(vendor/nice-select.css);
-@import url(vendor/perfect-scrollbar.css); */
+@import url(vendor/perfect-scrollbar.css);
 
 /*Google fonts
 	font-family: 'Crimson Text', serif;
