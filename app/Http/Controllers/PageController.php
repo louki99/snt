@@ -117,7 +117,7 @@ class PageController extends Controller
         $page = Page::find($request->id);
 
         $page->title = $request->title;
-        $page->slug = Str::slug($request->title);
+        $page->slug =$page->slug; //Str::slug($request->title);
         $page->definition = $request->definition;
         $page->inspiction = $request->inspiction;
         $page->act = $request->act;
@@ -225,6 +225,29 @@ class PageController extends Controller
     }
 
 
+    public function estimationAge($slug) {
+        $page = Page::where('slug', $slug)->first();
+        $menu = Page::where('parent_id', $page->id)->select('title','slug')->get();
+        return view("snt.pages.EstimationAge.index",[ 'page'=>$page,'menu'=>$menu ]);
+    }
+    public function showEstimationAge($slug) {
+        $page = Page::where('slug', $slug)->first();
+        $menu = Page::where('parent_id', $page->parent_id)->select('title','slug')->get();
 
+        return view("snt.pages.EstimationAge.show",[ 'page'=>$page,'menu'=>$menu]);
+    }
+
+
+    public function estimationSexe($slug) {
+        $page = Page::where('slug', $slug)->first();
+        $menu = Page::where('parent_id', $page->id)->select('title','slug')->get();
+        return view("snt.pages.EstimationSexe.index",[ 'page'=>$page,'menu'=>$menu ]);
+    }
+    public function showEstimationSexe($slug) {
+        $page = Page::where('slug', $slug)->first();
+        $menu = Page::where('parent_id', $page->parent_id)->select('title','slug')->get();
+
+        return view("snt.pages.EstimationSexe.show",[ 'page'=>$page,'menu'=>$menu]);
+    }
 
 }
