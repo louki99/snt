@@ -43,6 +43,15 @@ Route::get('/pages/examen-rapproche/show/{slug}', [PageController::class,'showEx
 Route::get('/pages/partie-thoracique/{slug}', [PageController::class,'partieThoracique'])->name('pages.partie.thoracique');
 Route::get('/pages/partie-thoracique/show/{slug}', [PageController::class,'showPartieThoracique'])->name('show.partie.thoracique');
 
+Route::get('/pages/partie-abdominale/{slug}', [PageController::class,'partieAbdominale'])->name('pages.partie.abdominale');
+Route::get('/pages/partie-abdominale/show/{slug}', [PageController::class,'showPartieAbdominale'])->name('show.partie.abdominale');
+
+Route::get('/pages/configuration-anatomique/{slug}', [PageController::class,'configurationAnatomique'])->name('pages.configuration.anatomique');
+Route::get('/pages/configuration-anatomique/show/{slug}', [PageController::class,'showConfigurationAnatomique'])->name('show.configuration.anatomique');
+
+Route::get('/pages/fressure/{slug}', [PageController::class,'fressure'])->name('pages.fressure');
+Route::get('/pages/fressure/show/{slug}', [PageController::class,'showFressure'])->name('show.fressure');
+
 
 
 Route::get('/pages/sant-animale/{slug}', [PageController::class,'santeAnimale'])->name('pages.sant.animale');

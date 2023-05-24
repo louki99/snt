@@ -182,6 +182,48 @@ class PageController extends Controller
     }
 
 
+    public function partieAbdominale($slug) {
+        $page = Page::where('slug', $slug)->first();
+        $menu = Page::where('parent_id', $page->id)->select('title','slug')->get();
+        return view("snt.pages.PartieAbdominale.index",[ 'page'=>$page,'menu'=>$menu ]);
+    }
+    public function showPartieAbdominale($slug) {
+        $page = Page::where('slug', $slug)->first();
+        $menu = Page::where('parent_id', $page->parent_id)->select('title','slug')->get();
+
+        return view("snt.pages.PartieAbdominale.show",[ 'page'=>$page,'menu'=>$menu]);
+    }
+
+
+    public function configurationAnatomique($slug) {
+        $page = Page::where('slug', $slug)->first();
+        $menu = Page::where('parent_id', $page->id)->select('title','slug')->get();
+        return view("snt.pages.ConfigurationAnatomique.index",[ 'page'=>$page,'menu'=>$menu ]);
+    }
+
+    public function showConfigurationAnatomique($slug) {
+
+        $page = Page::where('slug', $slug)->first();
+        $menu = Page::where('parent_id', $page->parent_id)->select('title','slug')->get();
+
+        $childs = Page::where("parent_id",$page->id)->get();
+
+        return view("snt.pages.ConfigurationAnatomique.show",[ 'page'=>$page,'menu'=>$menu,"childs"=>$childs]);
+    }
+
+
+    public function fressure($slug) {
+        $page = Page::where('slug', $slug)->first();
+        $menu = Page::where('parent_id', $page->id)->select('title','slug')->get();
+        return view("snt.pages.Fressure.index",[ 'page'=>$page,'menu'=>$menu ]);
+    }
+    public function showFressure($slug) {
+        $page = Page::where('slug', $slug)->first();
+        $menu = Page::where('parent_id', $page->parent_id)->select('title','slug')->get();
+
+        return view("snt.pages.Fressure.show",[ 'page'=>$page,'menu'=>$menu]);
+    }
+
 
 
 

@@ -130,8 +130,8 @@
                                 </li>
                                 <li><a class="link" href="#">Diagnose</a>
                                     <ul class="dbm">
-                                        <li><a class="link" href="#">La configuration anatomique</a></li>
-                                        <li><a class="link" href="#">La fressure</a></li>
+                                        <li><a class="link" href="{{ route('pages.configuration.anatomique',"configuration-anatomique") }}">La configuration anatomique</a></li>
+                                        <li><a class="link" href="{{ route('pages.fressure',"la-fressure") }}">La fressure</a></li>
                                     </ul>
                                 </li>
                                 <li><a class="link" href="#">Détermination de l'âge et du sexe</a>
