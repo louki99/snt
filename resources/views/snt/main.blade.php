@@ -8,9 +8,14 @@
 
     <script src="{{ asset("js/wow.min.js") }}"></script>
 
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.0.8/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script> --}}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
 
     @vite(['resources/js/app.js'])
 
@@ -48,6 +53,18 @@
             margin-right: 5px;
             width: 230px !important;
             height: 230px !important;
+        }
+
+        td{
+            padding: 10px !important;
+            font-family: inherit;
+        }
+        a{
+            text-decoration: none !important;
+        }
+
+        .container p {
+            line-height: 1.5 !important;
         }
     </style>
 

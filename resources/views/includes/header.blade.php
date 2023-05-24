@@ -27,8 +27,8 @@
                             class="slicknav_btn slicknav_collapsed" style="outline: none;">
                             <span class="slicknav_menutxt">Menu</span>
                             <span class="slicknav_icon">
-                                <span class="menu-icon"><span class="menu-icon-inner"></span></span><span
-                                    class="menu-text ml-5">Menu</span>
+                                <span class="menu-icon"><span class="menu-icon-inner"></span></span>
+                                <span class="menu-text ml-5">Menu</span>
                             </span>
                         </a>
                     </div>
@@ -87,54 +87,70 @@
             <div class="main-nav d-none d-lg-block float-left">
                 <nav>
                     <ul class="main-menu d-none d-lg-inline font-small">
-                        <li><a class="link" href="#">Home</a></li>
-                        <li><a class="link" href="{{ route("pages.show",'inspection-ante-mortem') }}">Inspection ante-mortem</a></li>
-                        {{-- <li>
-                            <a class="link" href="#">Inspection ante-mortem</a>
-                            <ul class="sub-menu text-muted font-small">
-                                <li>
-                                    <a class="link" href="#">ElementL</a>
-                                    <ul>
-                                        <li><a class="link" href="#">Sub element</a></li>
-                                        <li><a class="link" href="#">Sub element</a></li>
-                                        <li><a class="link" href="#">Sub element</a></li>
-                                        <li><a class="link" href="#">Sub element</a></li>
-                                        <li>
-                                            <a class="link" href="#">more</a>
-                                            <ul>
-                                                <li>
-                                                    <a class="link" href="#">Sub element</a>
-                                                    <ul>
-                                                        <li><a class="link" href="#">and even more</a></li>
-                                                        <li><a class="link" href="#">and even more</a></li>
-                                                        <li><a class="link" href="#">and even more</a></li>
-                                                        <li><a class="link" href="#">and even more</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a class="link" href="#">and more</a></li>
-                                            </ul>
-                                        </li>
+                        <li class="li"><a class="link" href="#">Accueil</a></li>
+                        <li  class="li"><a class="link" href="#">Réglementation</a>
+                            <ul class="sbm">
+                                <li><a class="link" href="#">La réglementation transversale</a>
+                                    <ul class="sbm">
+                                        <li><a class="link" href="{{ route('pages.show',"missions-et-attributions-de-lonssa")}}">Missions et attributions de l'ONSSA</a></li>
+                                        <li><a class="link" href="{{ route('pages.show',"securite-sanitaire")}}">Sécurité sanitaire</a></li>
+                                        <li><a class="link" href="{{ route('pages.show',"surveillance-et-controle-sanitaire")}}">Surveillance et contrôle sanitaire</a></li>
+                                        <li><a class="link" href="{{ route('pages.show',"conformite-des-produits")}}">Conformité des produits</a></li>
+                                        <li><a class="link" href="{{ route('pages.show',"transport-des-produits-alimentaires")}}">Transport des produits alimentaires</a></li>
+                                        <li><a class="link" href="{{ route('pages.show',"import-et-export")}}">Import et Export</a></li>
                                     </ul>
                                 </li>
-                                <li><a class="link" href="#">Multimedia</a></li>
-                                <li><a class="link" href="#">HTML Tables</a></li>
+                                <li><a class="link" href="#">La réglementation séctorielle</a>
+                                    <ul class="sbm">
+                                        <li><a class="link" href="{{ route('pages.sant.animale',"la-sante-animale")}}">La santé animale</a></li>
+                                        <li><a class="link" href="{{ route('pages.show',"les-produits-alimentaires")}}">Les produits alimentaires</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="link" href="{{ route('pages.show',"la-reglementation-connexe")}}">La réglementation connexe</a></li>
+                                <li><a class="link" href="{{ route('pages.show',"les-references-normatives")}}">Les références normatives</a></li>
                             </ul>
-                        </li> --}}
-                        <li><a class="link" href="#">Inspection post-mortem</a>
-                            <ul>
+
+                        </li>
+                        <li class="li"><a class="link" href="#">Inspection ante-mortem</a>
+                            <ul class="sbm">
+                                <li><a class="link" href="{{ route('pages.show',"inspection-ante-mortem-definition-et-principe")}}">Définition et principe</a></li>
+                                <li><a class="link" href="{{ route('pages.show',"inspection-ante-mortem-techniques-dinspection")}}">Techniques d'inspection</a></li>
+                                <li><a class="link" href="{{ route('pages.show',"inspection-ante-mortem-conduite-a-tenir")}}">Conduite à tenir</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="li"><a class="link" href="#">Inspection post-mortem</a>
+                            <ul class="sbm">
+                                <li><a class="link" href="#">Modalités de l'inspection sanitaire</a>
+                                    <ul class="sbm">
+                                        <li><a class="link" href="{{ route('pages.show',"modalites-de-linspection-sanitaire-definition-et-principes") }}">Définition et principes</a></li>
+                                        <li><a class="link" href="{{ route('pages.show',"modalites-de-linspection-sanitaire-moyens-utilises") }}">Moyens utilisés</a></li>
+                                        <li><a class="link" href="{{ route('pages.modalite.espece',"modalites-dinspection-selon-lespece") }}">Modalités d'inspection selon l'espèce</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="link" href="#">Diagnose</a>
+                                    <ul class="dbm">
+                                        <li><a class="link" href="#">La configuration anatomique</a></li>
+                                        <li><a class="link" href="#">La fressure</a></li>
+                                    </ul>
+                                </li>
                                 <li><a class="link" href="#">Détermination de l'âge et du sexe</a>
                                     <ul>
                                         <li><a class="link" href="#">Estimation de l'âge</a></li>
                                         <li><a class="link" href="#">Estimation du sexe</a></li>
                                     </ul>
                                 </li>
-                                <li><a class="link" href="#">Diagnose</a></li>
-                                <li><a class="link" href="#">Inspection sanitaire</a></li>
-                                <li><a class="link" href="#">Modalités de l'inspection qualitative</a></li>
+                                <li><a class="link" href="#">Modalités de l'inspection qualitative</a>
+                                    <ul class="dbm">
+                                        <li><a class="link" href="#">Les critères de la classification</a></li>
+                                        <li><a class="link" href="#">Les caratéristiques techniques de l'estampillage</a></li>
+                                        <li><a class="link" href="#">La classification des carcasses</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
-                        <li><a class="link" href="#">Motif de saisie</a>
-                            <ul>
+                        <li  class="li"><a class="link" href="#">Motif de saisie</a>
+                            <ul class="sbm">
                                 <li><a class="link" href="#">Viandes cadavériques</a></li>
                                 <li><a class="link" href="#">Viandes insuffisantes</a>
                                     <ul>
@@ -143,22 +159,35 @@
                                         <li><a class="link" href="#">Viandes maigres, amyotrophiques et cachectiques</a></li>
                                     </ul>
                                 </li>
-                                <li><a class="link" href="#">Viandes issues d'abattage défectueux</a></li>
-                                <li><a class="link" href="#">Viandes répugnantes</a></li>
+                                <li><a class="link" href="#">Viandes issues d'abattage défectueux</a>
+                                    <ul class="dbm">
+                                        <li><a class="link" href="#">Ecoffrage</a></li>
+                                        <li><a class="link" href="#">Tiquetage musculaire (Purpura d'abattage)</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="link" href="#">Viandes répugnantes</a>
+                                    <ul class="dbm">
+                                        <li><a class="link" href="#">Couleur anormale</a></li>
+                                        <li><a class="link" href="#">Odeur anormale</a></li>
+                                    </ul>
+                                </li>
                                 <li><a class="link" href="#">Viandes toxiques</a></li>
                                 <li><a class="link" href="#">Viandes virulentes</a>
-                                    <ul>
-                                        <li><a class="link" href="#">Affections parasitaires</a></li>
-                                        <li><a class="link" href="#">Viandes dangereuses</a></li>
+                                    <ul class="sbm">
                                         <li><a class="link" href="#">Viandes issues d'animaux atteints de MRLC</a></li>
                                         <li><a class="link" href="#">Viandes issues d'animaux non atteints de MRLC</a></li>
+                                        <li><a class="link" href="#">Affections parasitaires</a>
+                                            <ul class="sbm">
+                                                <li><a class="link" href="#">La carcasse</a></li>
+                                                <li><a class="link" href="#">Le 5ème quartier</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="link" href="#">Viandes dangereuses</a></li>
                                     </ul>
                                 </li>
 
                             </ul>
                         </li>
-                        <li><a class="link" href="#">Réglementation</a></li>
-
                     </ul>
                 </nav>
             </div>

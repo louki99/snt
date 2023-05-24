@@ -6,6 +6,9 @@ import '../theme/css/subMenu.css';
 import '../theme/css/widgets.css';
 import '../theme/css/responsive.css';
 import '../theme/css/custom.css';
+import '../theme/css/vendor/slick.css';
+// import '../theme/css/vendor/bootstrap.min.css';
+import '../css/app.css';
 
 
 import '../theme/js/vendor/modernizr-3.5.0.min';
@@ -22,4 +25,8 @@ import '../theme/js/vendor/perfect-scrollbar';
 import '../theme/js/vendor/jquery.waypoints.min';
 import '../theme/js/vendor/jquery.theia.sticky';
 import '../theme/js/vendor/jquery.slicknav';
+import '../theme/js/vendor/slick.min';
+import '../theme/js/vendor/bootstrap.min';
+
 import '../theme/js/main';
+import '../theme/js/custom'

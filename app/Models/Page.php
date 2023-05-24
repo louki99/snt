@@ -20,16 +20,22 @@ class Page extends Model implements HasMedia
         "definition",
         "inspiction",
         "act",
-        "published"
+        "published",
+        "content"
     ];
-
-    public function tabs()
-    {
-        return $this->hasMany(Tab::class);
-    }
 
     public function category()
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function parent()
+    {
+        return $this->belongsTo(Page::class, 'parent_id');
+    }
+
+    public function pages()
+    {
+        return $this->hasMany(Page::class);
     }
 }

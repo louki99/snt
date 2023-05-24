@@ -20,6 +20,18 @@ return new class extends Migration
             $table->longText("inspiction")->nullable();
             $table->longText("act")->nullable();
             $table->integer("published")->default(1);
+            $table->longText('content')->nullable();
+
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->foreign('category_id')
+            ->references('id')
+            ->on('categories');
+
+            $table->unsignedBigInteger('parent_id')->nullable();
+            $table->foreign('parent_id')
+            ->references('id')
+            ->on('pages');
+
             $table->timestamps();
         });
     }

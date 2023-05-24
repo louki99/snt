@@ -18,14 +18,26 @@
     white-space: nowrap;
   }
 
+  nav ul .li a {
+    color: #5c6575 !important;
+    font-weight: 666 !important;
+  }
+
   nav ul li:hover {
     background-color: #ccc;
+  }
+
+  nav ul .li:hover{
+    background-color: transparent !important;
   }
 
   nav ul ul {
     display: none;
     position: absolute;
     background-color: #fff;
+    z-index: 9;
+    box-shadow: 1px 1px 3px #999;
+    border: 1px solid #ddd8d8;
   }
 
   nav > ul {
@@ -68,7 +80,7 @@
   .link{
     font-weight: 600 !important;
     padding: 5px !important;
-    color: #687385 !important;
+    color: #181819 !important;
     line-height: 2;
   }
 
@@ -96,4 +108,14 @@
     border-radius: 5px !important;
     padding: 10px !important;
     color: #000;
+  }
+
+  .sbm li a{
+    font-size: 12px !important;
+    font-weight: normal !important;
+  }
+  .sbm li{
+      border-bottom: 1px solid #ccc;
+      transition: 0.40s ease all;
+      padding: 8px;
   }

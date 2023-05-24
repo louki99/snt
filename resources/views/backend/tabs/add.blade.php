@@ -29,8 +29,7 @@
 
             <div class="form-group">
                 <label>Content</label>
-                {{-- <textarea class="editor"  name="content"></textarea> --}}
-                <textarea id="summernote" name="content"></textarea>
+                <textarea class="summernote" name="content"></textarea>
             </div>
 
             <div class="form-group">

@@ -10,42 +10,21 @@
         <li class="app-sidebar__heading">Components</li>
         <li>
             <a href="#">
-                <i class="metismenu-icon pe-7s-diamond"></i>
-                Tabs
-                <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-            </a>
-            <ul>
-                <li>
-                    <a href="elements-buttons-standard.html">
-                        <i class="metismenu-icon"></i>
-                        View
-                    </a>
-                </li>
-                <li>
-                    <a href="elements-buttons-standard.html">
-                        <i class="metismenu-icon"></i>
-                        Add
-                    </a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="#">
                 <i class="metismenu-icon pe-7s-car"></i>
                 Pages
                 <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
             </a>
             <ul>
                 <li>
-                    <a href="components-tabs.html">
+                    <a href="{{ route("list.pages") }}">
                         <i class="metismenu-icon">
-                        </i>View
+                        </i>List pages
                     </a>
                 </li>
                 <li>
-                    <a href="components-accordions.html">
+                    <a href="{{ route("pages.add") }}">
                         <i class="metismenu-icon">
-                        </i>Add
+                        </i>Add Page
                     </a>
                 </li>
             </ul>

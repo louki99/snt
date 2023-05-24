@@ -28,10 +28,24 @@ Route::get('/', function () {
 Route::get('/page/{slug}', [PageController::class,'page'])->name('pages.show');
 
 Route::get('/pages/maladies', [PageController::class,'maladies'])->name('pages.maladies');
-
 Route::get('/pages/maladies/{slug}', [PageController::class,'maladie'])->name('pages.get.maladie');
 
+Route::get('/pages/sant-animale/{slug}', [PageController::class,'santeAnimale'])->name('pages.sant.animale');
+Route::get('/pages/sant-animale/show/{slug}', [PageController::class,'showSanteAnimale'])->name('show.sant.animale');
+
+Route::get('/pages/modalite-espece/{slug}', [PageController::class,'modaliteEspece'])->name('pages.modalite.espece');
+Route::get('/pages/modalite-espece/show/{slug}', [PageController::class,'showModaliteEspece'])->name('show.modalite.espece');
+
+
+Route::get('/pages/examen-rapproche/{slug}', [PageController::class,'examenRapproche'])->name('pages.examen.rapproche');
+Route::get('/pages/examen-rapproche/show/{slug}', [PageController::class,'showExamenRapproche'])->name('show.examen.rapproche');
+
+
+
+Route::get('/pages/sant-animale/{slug}', [PageController::class,'santeAnimale'])->name('pages.sant.animale');
+
 Route::group(['prefix' => 'dashboard'], function () {
+
     Route::get('/', [AdminController::class,'index'])->name('backend.index');
 
     Route::group(['prefix' => 'tabs'], function () {
@@ -44,6 +58,13 @@ Route::group(['prefix' => 'dashboard'], function () {
     Route::group(['prefix' => 'pages'], function () {
         Route::get('/add', [PageController::class,'add'])->name('pages.add');
         Route::post('/store', [PageController::class,'store'])->name('pages.store');
+
+        Route::get('/edit/{slug}', [PageController::class,'edit'])->name('pages.edit');
+
+        Route::get('/list', [PageController::class,'indexDash'])->name('list.pages');
+
+        Route::post('/update', [PageController::class,'update'])->name('pages.update');
+
     });
 
     Route::group(['prefix' => 'categories'], function () {

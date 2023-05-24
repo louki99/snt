@@ -37,6 +37,10 @@
         .app-page-title .page-title-subheading{
             font-size: 1.1rem !important;
         }
+
+        .note-editing-area p {
+            line-height: 1.5 !important;
+        }
     </style>
 
     <script>
@@ -104,6 +108,26 @@
     </script> --}}
 
     <script type="text/javascript" src="{{ asset('js/master.js') }}"></script>
+
+    <script>
+      const select = document.getElementById('layout');
+      //const sectioncontext = document.getElementById('sectioncontext');
+      //const sectionNormalPage = document.getElementById('sectionNormalPage');
+
+      //sectioncontext.style.display = 'none';
+
+
+    //   select.addEventListener('change', function() {
+    //         if (this.value == 1) {
+    //             sectioncontext.style.display = 'block';
+    //             sectionNormalPage.style.display = 'none';
+    //         } else {
+    //             sectioncontext.style.display = 'none';
+    //             sectionNormalPage.style.display = 'block';
+    //         }
+    //     });
+
+    </script>
 
 </body>
 
