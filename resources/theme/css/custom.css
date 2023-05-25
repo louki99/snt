@@ -136,3 +136,20 @@ table thead {
 .main-header .main-nav ul li a, .nav-topbar li a {
     font-size: 14px !important;
 }
+
+
+.login-form{
+    width: 500px;
+    padding: 10px;
+    margin-top: 30px !important;
+    background: #e8e5e5;
+    border-radius: 5px;
+    /* box-shadow: 1px 2px 1px #cccc; */
+}
+
+.btn-login{
+    background-color: #9e0505;
+    padding: 10px;
+    width: 100px;
+    margin: auto;
+}

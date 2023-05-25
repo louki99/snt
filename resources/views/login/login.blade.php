@@ -4,7 +4,7 @@
 @section('content')
 
 {{ $errors->has('Error') ? $errors : ''}}
-<form action="{{ route('login.action') }}" method="POST">
+{{-- <form action="{{ route('login.action') }}" method="POST">
     @csrf
     <label class="block text-sm">
         <span class="text-gray-700 dark:text-gray-400">Email</span>
@@ -19,7 +19,31 @@
       <button type="submit" class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
           Log in
       </button>
-</form>
+</form> --}}
+
+
+<div class="container m-auto  login-form">
+    <form action="{{ route('login.action') }}" method="POST">
+
+        @csrf
+
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form2Example1">Email address</label>
+          <input type="email" id="form2Example1" class="form-control" />
+        </div>
+
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form2Example2">Password</label>
+          <input type="password" id="form2Example2" class="form-control" />
+        </div>
+
+        <!-- Submit button -->
+        <button type="button" class="btn btn-primary btn-block btn-login mb-4">Sign in</button>
+      </form>
+
+</div>
 
 @endsection
 
