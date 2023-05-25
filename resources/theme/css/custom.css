@@ -132,3 +132,7 @@ table thead {
     height: auto !important;
 
 }
+
+.main-header .main-nav ul li a, .nav-topbar li a {
+    font-size: 14px !important;
+}

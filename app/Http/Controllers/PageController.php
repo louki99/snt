@@ -13,9 +13,14 @@ use Illuminate\Support\Facades\Session;
 
 class PageController extends Controller
 {
+
+    public function home() {
+        $page = Page::where('slug',"accueil")->first();
+        return view("welcome",compact("page"));
+    }
+
     public function add() {
         $categories = Category::all();
-        // $parents = Page::whereNull('parent_id')->get();
         $parents = Page::all();
 
         return view("backend.pages.add",["categories"=>$categories,"parents"=>$parents]);

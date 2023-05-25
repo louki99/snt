@@ -21,10 +21,11 @@ use App\Http\Controllers\LoginController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name("home");
+// Route::get('/', function () {
+//     return view('welcome');
+// })->name("home");
 
+Route::get('/', [PageController::class,'home'])->name('home');
 
 //Route::get('/pages', [TabController::class,'tabs'])->name('tabs.index');
 

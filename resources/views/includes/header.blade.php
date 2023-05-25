@@ -5,8 +5,13 @@
             <div class="row pt-20 pb-20">
                 <div class="col-md-3 col-6">
                     <a href="{{ route("home") }}">
-                        <img class="logo" src="https://stories.botble.com/storage/general/logo.png"
-                            alt="Stories - Laravel Personal Blog Script" /></a>
+                        {{-- <img class="logo" src="https://stories.botble.com/storage/general/logo.png"
+                            alt="Stories - Laravel Personal Blog Script" /></a> --}}
+
+                       <img class="logo" src="{{ asset('img/logo.jpeg') }}" alt="">
+
+                    </a>
+
                 </div>
                 <div class="col-md-9 col-6 text-right header-top-right">
                     <span class="vertical-divider mr-20 ml-20 d-none d-md-inline"></span>
@@ -192,7 +197,7 @@
                 </nav>
             </div>
             <div class="float-right header-tools text-muted font-small">
-                <ul class="header-social-network d-inline-block list-inline mr-15">
+                {{-- <ul class="header-social-network d-inline-block list-inline mr-15">
                     <li class="list-inline-item">
                         <a href="https://facebook.com" target="_blank" title="Facebook"
                             class="social-icon text-xs-center page_speed_941651901"><i
@@ -208,7 +213,7 @@
                             class="social-icon text-xs-center page_speed_105723944"><i
                                 class="elegant-icon social_linkedin"></i></a>
                     </li>
-                </ul>
+                </ul> --}}
                 <div class="off-canvas-toggle-cover d-inline-block">
                     <div class="off-canvas-toggle hidden d-inline-block" id="off-canvas-toggle"><span></span></div>
                 </div>
