@@ -1,18 +1,18 @@
 <footer class="pt-50 pb-20 bg-grey">
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-6 col-md-6">
                 <div class="sidebar-widget wow fadeInUp mb-30 animated" style="visibility: visible; animation-name: fadeInUp;">
                     <div class="widget-header-2 position-relative mb-30">
-                        <h5 class="mt-5 mb-30">About me</h5>
+                        <h5 class="mt-5 mb-30">À PROPOS DE MOI</h5>
                     </div>
                     <div class="textwidget">
                         <p>
-                            Start writing, no matter what. The water does not flow until the faucet is turned on.
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti nemo dolorum vel ipsum rerum voluptas eos iure necessitatibus molestias doloremque. Quia, explicabo quaerat omnis temporibus aspernatur nihil repellat totam enim.
                         </p>
                         <p>
-                            <strong class="color-black">Address</strong><br />
-                            123 Main Street New York, NY 100012
+                            <strong class="color-black">Sujet</strong><br />
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti nemo
                         </p>
                         <p><strong class="color-black">Follow me</strong><br /></p>
                         <ul class="header-social-network d-inline-block list-inline color-white mb-20">
@@ -36,45 +36,11 @@
                     </div>
                     <ul class="font-small">
                         <li>
-                            <a href="http://localhost:8000/" title="Homepage">
+                            <a href="{{ route("home") }}" title="Homepage">
                                 <span>Homepage</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="http://localhost:8000/contact" title="Contact">
-                                <span>Contact</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://localhost:8000/blog" title="Blog">
-                                <span>Blog</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://localhost:8000/travel" title="Travel">
-                                <span>Travel</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://localhost:8000/galleries" title="Galleries">
-                                <span>Galleries</span>
-                            </a>
-                        </li>
                     </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="sidebar-widget widget_tagcloud wow fadeInUp mb-30 animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                    <div class="widget-header-2 position-relative mb-30">
-                        <h5 class="mt-5 mb-30">Tags</h5>
-                    </div>
-                    <div class="tagcloud mt-50">
-                        <a class="tag-cloud-link" href="http://localhost:8000/tag/general">General</a>
-                        <a class="tag-cloud-link" href="http://localhost:8000/tag/design">Design</a>
-                        <a class="tag-cloud-link" href="http://localhost:8000/tag/fashion">Fashion</a>
-                        <a class="tag-cloud-link" href="http://localhost:8000/tag/branding">Branding</a>
-                        <a class="tag-cloud-link" href="http://localhost:8000/tag/modern">Modern</a>
-                    </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
