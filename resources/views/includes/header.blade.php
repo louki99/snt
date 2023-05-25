@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row pt-20 pb-20">
                 <div class="col-md-3 col-6">
-                    <a href="https://stories.botble.com">
+                    <a href="{{ route("home") }}">
                         <img class="logo" src="https://stories.botble.com/storage/general/logo.png"
                             alt="Stories - Laravel Personal Blog Script" /></a>
                 </div>
@@ -32,12 +32,12 @@
                             </span>
                         </a>
                     </div>
-                    <ul class="slicknav_nav slicknav_hidden" data-label="Menu" style="display: none;" aria-hidden="true"
+                    {{-- <ul class="slicknav_nav slicknav_hidden" data-label="Menu" style="display: none;" aria-hidden="true"
                         role="menu">
                         <li class="menu-item-has-children slicknav_collapsed slicknav_parent">
                             <a href="#" role="menuitem" aria-haspopup="true" tabindex="-1"
                                 class="slicknav_item slicknav_row" style="outline: none;">
-                                <a href="https://stories.botble.com/" tabindex="-1"><i
+                                <a href="{{ route("home") }}" tabindex="-1"><i
                                         class="elegant-icon mr-5 elegant-icon icon_house_alt mr-5"></i> Home </a><span
                                     class="slicknav_arrow">+</span>
                             </a>
@@ -81,13 +81,13 @@
                         </li>
                         <li class=" "><a href="https://stories.botble.com/contact" role="menuitem"
                                 tabindex="-1"> Contact </a></li>
-                    </ul>
+                    </ul> --}}
                 </div>
             </div>
             <div class="main-nav d-none d-lg-block float-left">
                 <nav>
                     <ul class="main-menu d-none d-lg-inline font-small">
-                        <li class="li"><a class="link" href="#">Accueil</a></li>
+                        <li class="li"><a class="link" href="{{ route("home") }}">Accueil</a></li>
                         <li  class="li"><a class="link" href="#">Réglementation</a>
                             <ul class="sbm">
                                 <li><a class="link" href="#">La réglementation transversale</a>

@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\TabController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -76,6 +77,7 @@ Route::get('/pages/viandes-atteints-mrlc/show/{slug}', [PageController::class,'s
 Route::get('/pages/sant-animale/{slug}', [PageController::class,'santeAnimale'])->name('pages.sant.animale');
 
 
+Route::get('/search-engine', [SearchController::class,'search'])->name('pages.seearch');
 
 
 Route::group(['prefix' => 'dashboard'], function () {
