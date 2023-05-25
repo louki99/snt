@@ -3,9 +3,7 @@
 @section('page')
 
 @if ($page->content)
-<div>
-    {!! $page->content !!}
-</div>
+   {!! $page->content !!}
 @endif
 
 <div class="p-50">

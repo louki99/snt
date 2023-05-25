@@ -7,15 +7,31 @@
     <title>Document</title>
 
     <script src="{{ asset("js/wow.min.js") }}"></script>
-
     <script src="{{ asset("js/jquery.min.js") }}"></script>
     <script src="{{ asset("js/jquery.fancybox.min.js") }}"></script>
+
+    <script src="{{ asset("theme/js/vendor/modernizr-3.5.0.min.js") }}"></script>
+    <script src="{{ asset("theme/js/vendor/slick.min.js")}}"></script>
+    <script src="{{ asset("theme/js/vendor/jquery.ticker.js")}}"></script>
+    <script src="{{ asset("theme/js/vendor/jquery.vticker-min.js")}}"></script>
+    <script src="{{ asset("theme/js/vendor/jquery.nice-select.min.js")}}"></script>
+    <script src="{{ asset("theme/js/vendor/jquery.magnific-popup.js")}}"></script>
+    <script src="{{ asset("theme/js/vendor/jquery.scrollUp.min.js")}}"></script>
+    <script src="{{ asset("theme/js/vendor/jquery.sticky.js")}}"></script>
+    <script src="{{ asset("theme/js/vendor/perfect-scrollbar.js")}}"></script>
+    <script src="{{ asset("theme/js/vendor/jquery.waypoints.min.js")}}"></script>
+    <script src="{{ asset("theme/js/vendor/jquery.theia.sticky.js")}}"></script>
+    <script src="{{ asset("theme/js/vendor/jquery.slicknav.js")}}"></script>
+    <script src="{{ asset("theme/js/vendor/bootstrap.min.js")}}"></script>
+    <script src="{{ asset("theme/js/main.js")}}"></script>
+    <script src="{{ asset("theme/js/custom.js")}}"></script>
+
 
     <link rel="stylesheet" href="{{ asset("css/jquery.fancybox.css") }}">
 
     <link href="https://fonts.cdnfonts.com/css/open-sans" rel="stylesheet">
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/js/app.js'])
 
     <style>
         :root {

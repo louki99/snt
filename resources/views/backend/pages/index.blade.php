@@ -33,6 +33,7 @@
          <tr>
              <th>#</th>
              <th>Title</th>
+             <th>Slug</th>
              <th>Layout</th>
              <th>parent</th>
              <th>Action</th>
@@ -44,6 +45,7 @@
              <tr>
                  <td><b>00{{$page->id}}</b></td>
                  <td>{{ $page->title }}</td>
+                 <td><u>{{ $page->slug }}</u></td>
                  <td><u>{{ $page->category->name }}</u></td>
                  <td>
                     @if ($page->parent)

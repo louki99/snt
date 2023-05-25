@@ -96,7 +96,9 @@ class PageController extends Controller
     public function indexDash(Request $request) {
 
         $searchTerm = $request->input('search');
-        $pages = Page::where('title', 'LIKE', '%' . $searchTerm . '%')->paginate(6);
+        $pages = Page::where('title', 'LIKE', '%' . $searchTerm . '%')
+                    ->orWhere("slug", 'LIKE', '%' . $searchTerm . '%')
+                    ->paginate(6);
 
         return view('backend.pages.index',[ 'pages'=>$pages]);
     }

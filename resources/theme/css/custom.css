@@ -2,7 +2,7 @@
 
 #gallary{
     position: relative;
-    padding-top: 40px;
+    /* padding-top: 40px; */
     /* padding-bottom: 40px; */
     background-color: transparent;
 }
@@ -61,4 +61,71 @@
 .mside span svg{
     width: 15px;
     color: black;
+}
+
+
+.container > p{
+    padding: 10px !important;
+    margin: 10px;
+    background-color: transparent;
+    border: 1px solid #efecec;
+    border-radius: 5px;
+    color: #374151 !important;
+}
+
+p{
+    color: #374151 !important;
+}
+.container ul li p{
+    color: #374151 !important;
+}
+
+.container div p{
+    color: #374151 !important;
+}
+
+.container > p a{
+    color: #687385 !important;
+}
+
+.container > p a:hover{
+    color: #5255d6 !important;
+}
+
+.container h2 {
+    margin: 10px !important;
+    font-weight: bold;
+    font-size: 2rem;
+    color: #374151 !important;
+}
+
+.container .archive-header p {
+    margin: 10px !important;
+}
+
+.container div h1 {
+    font-weight: bold;
+    color: #374151 !important;
+    font-size: 2rem;
+}
+
+table{
+    border: 1px solid rgb(196, 196, 196);
+    box-shadow: 1px 3px 2px  #ccc;
+}
+
+table thead {
+    background-color: #cbcbcb;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.table thead tr td {
+    font-size: 12px;
+}
+
+.container div p img {
+    width: 100% !important;
+    height: auto !important;
+
 }
