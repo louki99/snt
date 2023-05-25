@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Session;
 class PageController extends Controller
 {
     public function add() {
-
         $categories = Category::all();
         // $parents = Page::whereNull('parent_id')->get();
         $parents = Page::all();
@@ -45,30 +44,22 @@ class PageController extends Controller
         }
 
         return back()->withSuccess('page added success!');
-
     }
 
     public function page($slug) {
-
        $page = Page::where('slug',$slug)->first();
        $childs = Page::where("parent_id",$page->id)->get();
-
        return view("snt.pages.index",["page"=>$page,"childs"=>$childs]);
     }
 
     public function maladies() {
-
         $pages = Page::where('category_id', 1)->select('title','slug')->get();
-
         return view("snt.pages.maladier",compact("pages"));
     }
 
      public function maladie($slug) {
-
         $page = Page::where('slug', $slug)->first();
-
         $pages = Page::where('category_id', 1)->select('title','slug')->get();
-
         return view("snt.pages.getMaladier",[ 'page'=>$page,'pages'=>$pages ]);
      }
 
@@ -87,7 +78,7 @@ class PageController extends Controller
 
         $page = Page::where('slug', $slug)->first();
 
-        $menu = Page::where('parent_id', $page->parent_id)->select('title','slug')->get();
+        $menu = $this->retrieveMenu($page->parent_id);
 
         return view("snt.pages.SanteAnimale.show",[ 'page'=>$page,'menu'=>$menu ]);
     }
@@ -105,12 +96,11 @@ class PageController extends Controller
 
 
     public function edit($slug) {
-
         $categories = Category::all();
-        $parents    = Page::whereNull('parent_id')->get();
+        $parents    = Page::all();//Page::whereNull('parent_id')->get();
         $page       = Page::where('slug', $slug)->first();
-        return view("backend.pages.edit",["categories"=>$categories,"parents"=>$parents,"page"=>$page]);
 
+        return view("backend.pages.edit",["categories"=>$categories,"parents"=>$parents,"page"=>$page]);
     }
 
 
@@ -144,150 +134,179 @@ class PageController extends Controller
 
 
     public function modaliteEspece($slug) {
-        $page = Page::where('slug', $slug)->first();
-        $menu = Page::where('parent_id', $page->id)->select('title','slug')->get();
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->id);
         return view("snt.pages.ModaliteEspece.index",[ 'page'=>$page,'menu'=>$menu ]);
     }
 
     public function showModaliteEspece($slug) {
-        $page = Page::where('slug', $slug)->first();
-        $menu = Page::where('parent_id', $page->parent_id)->select('title','slug')->get();
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->parent_id);
         return view("snt.pages.ModaliteEspece.show",[ 'page'=>$page,'menu'=>$menu ]);
     }
 
 
 
     public function examenRapproche($slug) {
-        $page = Page::where('slug', $slug)->first();
-        $menu = Page::where('parent_id', $page->id)->select('title','slug')->get();
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->id);
         return view("snt.pages.ExamenRapproche.index",[ 'page'=>$page,'menu'=>$menu ]);
     }
 
     public function showExamenRapproche($slug) {
-        $page = Page::where('slug', $slug)->first();
-        $menu = Page::where('parent_id', $page->parent_id)->select('title','slug')->get();
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->parent_id);
 
         return view("snt.pages.ExamenRapproche.show",[ 'page'=>$page,'menu'=>$menu]);
     }
 
     public function partieThoracique($slug) {
-        $page = Page::where('slug', $slug)->first();
-        $menu = Page::where('parent_id', $page->id)->select('title','slug')->get();
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->id);
         return view("snt.pages.PartieThoracique.index",[ 'page'=>$page,'menu'=>$menu ]);
     }
 
     public function showPartieThoracique($slug) {
-        $page = Page::where('slug', $slug)->first();
-        $menu = Page::where('parent_id', $page->parent_id)->select('title','slug')->get();
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->parent_id);
 
         return view("snt.pages.PartieThoracique.show",[ 'page'=>$page,'menu'=>$menu]);
     }
 
 
     public function partieAbdominale($slug) {
-        $page = Page::where('slug', $slug)->first();
-        $menu = Page::where('parent_id', $page->id)->select('title','slug')->get();
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->id);
         return view("snt.pages.PartieAbdominale.index",[ 'page'=>$page,'menu'=>$menu ]);
     }
     public function showPartieAbdominale($slug) {
-        $page = Page::where('slug', $slug)->first();
-        $menu = Page::where('parent_id', $page->parent_id)->select('title','slug')->get();
-
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->parent_id);
         return view("snt.pages.PartieAbdominale.show",[ 'page'=>$page,'menu'=>$menu]);
     }
 
 
     public function configurationAnatomique($slug) {
-        $page = Page::where('slug', $slug)->first();
-        $menu = Page::where('parent_id', $page->id)->select('title','slug')->get();
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->id);
         return view("snt.pages.ConfigurationAnatomique.index",[ 'page'=>$page,'menu'=>$menu ]);
     }
 
     public function showConfigurationAnatomique($slug) {
 
-        $page = Page::where('slug', $slug)->first();
-        $menu = Page::where('parent_id', $page->parent_id)->select('title','slug')->get();
-
+        $page   = $this->retrievePage($slug);
+        $menu   = $this->retrieveMenu($page->parent_id);
         $childs = Page::where("parent_id",$page->id)->get();
-
         return view("snt.pages.ConfigurationAnatomique.show",[ 'page'=>$page,'menu'=>$menu,"childs"=>$childs]);
     }
 
 
     public function fressure($slug) {
-        $page = Page::where('slug', $slug)->first();
-        $menu = Page::where('parent_id', $page->id)->select('title','slug')->get();
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->id);
         return view("snt.pages.Fressure.index",[ 'page'=>$page,'menu'=>$menu ]);
     }
     public function showFressure($slug) {
-        $page = Page::where('slug', $slug)->first();
-        $menu = Page::where('parent_id', $page->parent_id)->select('title','slug')->get();
-
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->parent_id);
         return view("snt.pages.Fressure.show",[ 'page'=>$page,'menu'=>$menu]);
     }
 
 
     public function estimationAge($slug) {
-        $page = Page::where('slug', $slug)->first();
-        $menu = Page::where('parent_id', $page->id)->select('title','slug')->get();
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->id);
         return view("snt.pages.EstimationAge.index",[ 'page'=>$page,'menu'=>$menu ]);
     }
     public function showEstimationAge($slug) {
-        $page = Page::where('slug', $slug)->first();
-        $menu = Page::where('parent_id', $page->parent_id)->select('title','slug')->get();
-
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->parent_id);
         return view("snt.pages.EstimationAge.show",[ 'page'=>$page,'menu'=>$menu]);
     }
 
 
     public function estimationSexe($slug) {
-        $page = Page::where('slug', $slug)->first();
-        $menu = Page::where('parent_id', $page->id)->select('title','slug')->get();
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->id);
         return view("snt.pages.EstimationSexe.index",[ 'page'=>$page,'menu'=>$menu ]);
     }
     public function showEstimationSexe($slug) {
-        $page = Page::where('slug', $slug)->first();
-        $menu = Page::where('parent_id', $page->parent_id)->select('title','slug')->get();
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->parent_id);
 
         return view("snt.pages.EstimationSexe.show",[ 'page'=>$page,'menu'=>$menu]);
     }
 
     public function arateristiquesTechniquesLestampillage($slug) {
-        $page = Page::where('slug', $slug)->first();
-        $menu = Page::where('parent_id', $page->id)->select('title','slug')->get();
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->id);
         return view("snt.pages.ArateristiquesTechniquesLestampillage.index",[ 'page'=>$page,'menu'=>$menu ]);
     }
     public function showarateristiquesTechniquesLestampillage($slug) {
-        $page = Page::where('slug', $slug)->first();
-        $menu = Page::where('parent_id', $page->parent_id)->select('title','slug')->get();
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->parent_id);
 
         return view("snt.pages.ArateristiquesTechniquesLestampillage.show",[ 'page'=>$page,'menu'=>$menu]);
     }
 
 
     public function classificationCarcasses($slug) {
-        $page = Page::where('slug', $slug)->first();
-        $menu = Page::where('parent_id', $page->id)->select('title','slug')->get();
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->id);
         return view("snt.pages.ClassificationCarcasses.index",[ 'page'=>$page,'menu'=>$menu ]);
     }
     public function showclassificationCarcasses($slug) {
-        $page = Page::where('slug', $slug)->first();
-        $menu = Page::where('parent_id', $page->parent_id)->select('title','slug')->get();
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->parent_id);
 
         return view("snt.pages.ClassificationCarcasses.show",[ 'page'=>$page,'menu'=>$menu]);
     }
 
     public function viandesGelatineuses($slug) {
-        $page = Page::where('slug', $slug)->first();
-        $menu = Page::where('parent_id', $page->id)->select('title','slug')->get();
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->id);
         return view("snt.pages.ViandesGelatineuses.index",[ 'page'=>$page,'menu'=>$menu ]);
     }
     public function showcviandesGelatineuses($slug) {
-        $page = Page::where('slug', $slug)->first();
-        $menu = Page::where('parent_id', $page->parent_id)->select('title','slug')->get();
-
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->parent_id);
         return view("snt.pages.ViandesGelatineuses.show",[ 'page'=>$page,'menu'=>$menu]);
     }
 
+    public function viandesMaigres($slug) {
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->id);
+        return view("snt.pages.ViandesMaigres.index",['page'=>$page,'menu'=>$menu ]);
+    }
+
+    public function showviandesMaigres($slug) {
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->parent_id);
+        return view("snt.pages.ViandesMaigres.show",['page'=>$page,'menu'=>$menu ]);
+    }
+
+    public function viandesAtteintsMrlc($slug) {
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->id);
+        return view("snt.pages.ViandesAtteintsMRLC.index",['page'=>$page,'menu'=>$menu ]);
+    }
+
+    public function showviandesAtteintsMrlc($slug) {
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->parent_id);
+
+        return view("snt.pages.ViandesAtteintsMRLC.show",['page'=>$page,'menu'=>$menu]);
+    }
+
+
+    private function retrievePage($slug) {
+        $page = Page::where('slug', $slug)->first();
+        return $page;
+    }
+
+    private function retrieveMenu($condition) {
+        $menu = Page::where('parent_id', $condition)->select('title','slug')->get();
+        return $menu;
+    }
 
 }

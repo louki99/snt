@@ -67,6 +67,14 @@ Route::get('/pages/classification-carcasses/show/{slug}', [PageController::class
 Route::get('/pages/viandes-gelatineuses/{slug}', [PageController::class,'viandesGelatineuses'])->name('pages.viandes.gelatineuses');
 Route::get('/pages/viandes-gelatineuses/show/{slug}', [PageController::class,'showcviandesGelatineuses'])->name('show.viandes.gelatineuses');
 
+Route::get('/pages/viandes-maigres/{slug}', [PageController::class,'viandesMaigres'])->name('pages.viandes.maigres');
+Route::get('/pages/viandes-maigres/show/{slug}', [PageController::class,'showviandesMaigres'])->name('show.viandes.maigres');
+
+Route::get('/pages/viandes-atteints-mrlc/{slug}', [PageController::class,'viandesAtteintsMrlc'])->name('pages.viandes.atteints.mrlc');
+Route::get('/pages/viandes-atteints-mrlc/show/{slug}', [PageController::class,'showviandesAtteintsMrlc'])->name('show.viandes.atteints.mrlc');
+
+
+
 Route::get('/pages/sant-animale/{slug}', [PageController::class,'santeAnimale'])->name('pages.sant.animale');
 
 Route::group(['prefix' => 'dashboard'], function () {

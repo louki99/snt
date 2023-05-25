@@ -38,4 +38,12 @@ class Page extends Model implements HasMedia
     {
         return $this->hasMany(Page::class);
     }
+
+    public function childs()
+    {
+        return $this->hasMany(Page::class, 'parent_id');
+    }
+
+
+
 }

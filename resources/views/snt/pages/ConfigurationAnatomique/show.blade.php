@@ -17,7 +17,7 @@
                         </h5>
                     </div>
 
-                    <div id="collapse{{$item->id}}" class="collapse show" aria-labelledby="{{ $item->id }}" data-parent="#accordion">
+                    <div id="collapse{{$item->id}}" class="collapse" aria-labelledby="{{ $item->id }}" data-parent="#accordion">
                         <div class="card-body">
                             {!! $item->content !!}
                         </div>

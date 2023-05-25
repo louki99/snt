@@ -156,25 +156,25 @@
                                     <ul>
                                         <li><a class="link" href="{{ route("pages.viandes.gelatineuses","viandes-gelatineuses") }}">Viandes gélatineuses</a></li>
                                         <li><a class="link" href="{{ route("pages.show","viandes-infiltrees") }}">Viandes infiltrées</a></li>
-                                        <li><a class="link" href="#">Viandes maigres, amyotrophiques et cachectiques</a></li>
+                                        <li><a class="link" href="{{ route("pages.viandes.maigres","viandes-maigres-amyotrophiques-et-cachectiques") }}">Viandes maigres, amyotrophiques et cachectiques</a></li>
                                     </ul>
                                 </li>
                                 <li><a class="link" href="#">Viandes issues d'abattage défectueux</a>
                                     <ul class="dbm">
-                                        <li><a class="link" href="#">Ecoffrage</a></li>
-                                        <li><a class="link" href="#">Tiquetage musculaire (Purpura d'abattage)</a></li>
+                                        <li><a class="link" href="{{ route("pages.show","ecoffrage") }}">Ecoffrage</a></li>
+                                        <li><a class="link" href="{{ route("pages.show","tiquetage-musculaire-purpura-dabattage") }}">Tiquetage musculaire (Purpura d'abattage)</a></li>
                                     </ul>
                                 </li>
                                 <li><a class="link" href="#">Viandes répugnantes</a>
                                     <ul class="dbm">
-                                        <li><a class="link" href="#">Couleur anormale</a></li>
-                                        <li><a class="link" href="#">Odeur anormale</a></li>
+                                        <li><a class="link" href="{{ route("pages.show","couleur-anormale") }}">Couleur anormale</a></li>
+                                        <li><a class="link" href="{{ route("pages.show","odeur-anormale") }}">Odeur anormale</a></li>
                                     </ul>
                                 </li>
-                                <li><a class="link" href="#">Viandes toxiques</a></li>
+                                <li><a class="link" href="{{ route("pages.show","viandes-toxiques") }}">Viandes toxiques</a></li>
                                 <li><a class="link" href="#">Viandes virulentes</a>
                                     <ul class="sbm">
-                                        <li><a class="link" href="#">Viandes issues d'animaux atteints de MRLC</a></li>
+                                        <li><a class="link" href="{{ route("pages.viandes.atteints.mrlc","viandes-issues-danimaux-atteints-de-mrlc") }}">Viandes issues d'animaux atteints de MRLC</a></li>
                                         <li><a class="link" href="#">Viandes issues d'animaux non atteints de MRLC</a></li>
                                         <li><a class="link" href="#">Affections parasitaires</a>
                                             <ul class="sbm">
