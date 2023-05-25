@@ -73,20 +73,14 @@ Route::get('/pages/viandes-maigres/show/{slug}', [PageController::class,'showvia
 Route::get('/pages/viandes-atteints-mrlc/{slug}', [PageController::class,'viandesAtteintsMrlc'])->name('pages.viandes.atteints.mrlc');
 Route::get('/pages/viandes-atteints-mrlc/show/{slug}', [PageController::class,'showviandesAtteintsMrlc'])->name('show.viandes.atteints.mrlc');
 
-
-
 Route::get('/pages/sant-animale/{slug}', [PageController::class,'santeAnimale'])->name('pages.sant.animale');
+
+
+
 
 Route::group(['prefix' => 'dashboard'], function () {
 
     Route::get('/', [AdminController::class,'index'])->name('backend.index');
-
-    Route::group(['prefix' => 'tabs'], function () {
-        Route::get('/add', [TabController::class,'add'])->name('tabs.add');
-        Route::post('/store', [TabController::class,'store'])->name('tabs.store');
-
-        Route::post('/uploadImage', [TabController::class,'uploadimage'])->name('ckfinder.upload');
-    });
 
     Route::group(['prefix' => 'pages'], function () {
         Route::get('/add', [PageController::class,'add'])->name('pages.add');
