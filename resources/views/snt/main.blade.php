@@ -10,6 +10,7 @@
     <script src="{{ asset("js/jquery.min.js") }}"></script>
     <script src="{{ asset("js/jquery.fancybox.min.js") }}"></script>
 
+
     <script src="{{ asset("theme/js/vendor/modernizr-3.5.0.min.js") }}"></script>
     <script src="{{ asset("theme/js/vendor/slick.min.js")}}"></script>
     <script src="{{ asset("theme/js/vendor/jquery.ticker.js")}}"></script>
@@ -25,6 +26,10 @@
     <script src="{{ asset("theme/js/vendor/bootstrap.min.js")}}"></script>
     <script src="{{ asset("theme/js/main.js")}}"></script>
     <script src="{{ asset("theme/js/custom.js")}}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 
 
     <link rel="stylesheet" href="{{ asset("css/jquery.fancybox.css") }}">

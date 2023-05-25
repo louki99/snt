@@ -33,7 +33,7 @@
         </div>
         <div class="col-md-10">
             <div class="container">
-                    @if ($page->getMedia('gpages'))
+                    {{-- @if ($page->getMedia('gpages'))
                         <div id="gallary">
                             <div class="slick-carousel">
                                 @foreach ($page->getMedia('gpages') as $image)
@@ -49,7 +49,7 @@
                                 @endforeach
                             </div>
                         </div>
-                    @endif
+                    @endif --}}
                 @yield("page")
             </div>
         </div>

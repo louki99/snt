@@ -57,4 +57,11 @@ $(document).ready(function() {
             return $(this).attr('title');
         }
     });
+
+    // $('#myCarousel').carousel({
+    //     interval: 5000,
+    //     wrap: true
+    // });
+
+    // alert("ok")
 });

@@ -7,6 +7,8 @@ use App\Http\Controllers\TabController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\LoginController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -79,29 +81,43 @@ Route::get('/pages/sant-animale/{slug}', [PageController::class,'santeAnimale'])
 
 Route::get('/search-engine', [SearchController::class,'search'])->name('pages.seearch');
 
+// login
+Route::get('login', [LoginController::class, 'login'])->name('login');
+Route::post('login', [LoginController::class, 'login_action'])->name('login.action');
 
-Route::group(['prefix' => 'dashboard'], function () {
+// logout
+Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 
-    Route::get('/', [AdminController::class,'index'])->name('backend.index');
 
-    Route::group(['prefix' => 'pages'], function () {
-        Route::get('/add', [PageController::class,'add'])->name('pages.add');
-        Route::post('/store', [PageController::class,'store'])->name('pages.store');
+Route::group(['middleware' => ['auth:sanctum']], function() {
 
-        Route::get('/edit/{slug}', [PageController::class,'edit'])->name('pages.edit');
+    Route::group(['prefix' => 'dashboard'], function () {
 
-        Route::get('/list', [PageController::class,'indexDash'])->name('list.pages');
+        Route::get('/', [AdminController::class,'index'])->name('backend.index');
 
-        Route::post('/update', [PageController::class,'update'])->name('pages.update');
+        Route::group(['prefix' => 'pages'], function () {
+            Route::get('/add', [PageController::class,'add'])->name('pages.add');
+            Route::post('/store', [PageController::class,'store'])->name('pages.store');
 
-    });
+            Route::get('/edit/{slug}', [PageController::class,'edit'])->name('pages.edit');
 
-    Route::group(['prefix' => 'categories'], function () {
-        Route::get('/', [CategoryController::class,'index'])->name('categories.add');
-        Route::post('/store', [CategoryController::class,'store'])->name('category.store');
+            Route::get('/list', [PageController::class,'indexDash'])->name('list.pages');
+
+            Route::post('/update', [PageController::class,'update'])->name('pages.update');
+
+        });
+
+        Route::group(['prefix' => 'categories'], function () {
+            Route::get('/', [CategoryController::class,'index'])->name('categories.add');
+            Route::post('/store', [CategoryController::class,'store'])->name('category.store');
+        });
+
     });
 
 });
+
+
+
 
 
 
