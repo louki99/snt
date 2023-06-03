@@ -3,27 +3,27 @@ $(document).ready(function() {
     $('.slick-carousel').slick({
         dots: false, // Show navigation dots
         arrows: true, // Show navigation arrows
-        infinite: true, // Enable infinite scrolling
+        infinite: false, // Enable infinite scrolling
         autoplay: true, // Enable autoplay
         slidesToShow: 4, // Number of slides to show at a time
         slidesToScroll: 1, // Number of slides to scroll at a time
         autoplaySpeed: 30000, // Autoplay speed in milliseconds
         prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"> <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></button>',
         nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></button>',
-        responsive: [
-            {
-                breakpoint: 768, // Responsive breakpoint
-                settings: {
-                    slidesToShow: 2, // Adjust slidesToShow for smaller screens
-                }
-            },
-            {
-                breakpoint: 480, // Responsive breakpoint
-                settings: {
-                    slidesToShow: 1, // Adjust slidesToShow for even smaller screens
-                }
-            }
-        ]
+        // responsive: [
+        //     {
+        //         breakpoint: 768, // Responsive breakpoint
+        //         settings: {
+        //             slidesToShow: 2, // Adjust slidesToShow for smaller screens
+        //         }
+        //     },
+        //     {
+        //         breakpoint: 480, // Responsive breakpoint
+        //         settings: {
+        //             slidesToShow: 1, // Adjust slidesToShow for even smaller screens
+        //         }
+        //     }
+        // ]
     });
 
     $('[data-fancybox="gallery"]').fancybox({
@@ -57,11 +57,4 @@ $(document).ready(function() {
             return $(this).attr('title');
         }
     });
-
-    // $('#myCarousel').carousel({
-    //     interval: 5000,
-    //     wrap: true
-    // });
-
-    // alert("ok")
 });

@@ -303,6 +303,58 @@ class PageController extends Controller
         return view("snt.pages.ViandesAtteintsMRLC.show",['page'=>$page,'menu'=>$menu]);
     }
 
+    public function viandesNonAtteintsMrlc($slug) {
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->id);
+        return view("snt.pages.ViandesNonAtteintsMRLC.index",['page'=>$page,'menu'=>$menu ]);
+    }
+
+    public function shownonviandesAtteintsMrlc($slug) {
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->parent_id);
+
+        return view("snt.pages.ViandesNonAtteintsMRLC.show",['page'=>$page,'menu'=>$menu]);
+    }
+
+    public function carcasse($slug) {
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->id);
+        return view("snt.pages.Carcasse.index",['page'=>$page,'menu'=>$menu ]);
+    }
+
+    public function showcarcasse($slug) {
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->parent_id);
+
+        return view("snt.pages.Carcasse.show",['page'=>$page,'menu'=>$menu]);
+    }
+
+    public function cinquiemequartier($slug) {
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->id);
+        return view("snt.pages.5emequartier.index",['page'=>$page,'menu'=>$menu ]);
+    }
+
+    public function showcinquiemequartier($slug) {
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->parent_id);
+
+        return view("snt.pages.5emequartier.show",['page'=>$page,'menu'=>$menu]);
+    }
+
+    public function viandesDangereuses($slug) {
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->id);
+        return view("snt.pages.ViandesDangereuses.index",['page'=>$page,'menu'=>$menu ]);
+    }
+
+    public function showviandesDangereuses($slug) {
+        $page = $this->retrievePage($slug);
+        $menu = $this->retrieveMenu($page->parent_id);
+
+        return view("snt.pages.ViandesDangereuses.show",['page'=>$page,'menu'=>$menu]);
+    }
+
 
     private function retrievePage($slug) {
         $page = Page::where('slug', $slug)->first();

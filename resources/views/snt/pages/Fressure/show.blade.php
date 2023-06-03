@@ -11,7 +11,7 @@
 <div class="p-50">
     @if ($page->definition)
         <div class="archive-header">
-            <h2 class="font-weight-900">LA fressure</h2>
+            <h2 class="font-weight-900">Definition</h2>
             <p>{!! $page->definition !!}</p>
             <div class="bt-1 border-color-1 mt-30 mb-50"></div>
         </div>
@@ -50,6 +50,26 @@
                 {!! $page->act !!}
             </div>
         </div>
+    @endif
+</div>
+
+<div>
+    @if ($page->parent->getMedia('gpages'))
+    <div id="gallary">
+        <div class="slick-carousel">
+            @foreach ($page->parent->getMedia('gpages') as $image)
+            <div class="item post-card-1 border-radius-10 hover-up">
+                <a href="{{$image->getUrl()}}" data-fancybox="gallery" title="{{$image->name}}">
+                    <div class="post-thumb thumb-overlay img-hover-slide position-relative"
+                        style='background-image: url("{{ $image->getUrl() }}");margin: 10px;'>
+                    </div>
+                    <p class="text-center title-g">{{ substr($image->name,0,80) }}...</p>
+                </a>
+
+            </div>
+            @endforeach
+        </div>
+    </div>
     @endif
 </div>
 

@@ -82,6 +82,19 @@ Route::get('/pages/sant-animale/{slug}', [PageController::class,'santeAnimale'])
 
 Route::get('/search-engine', [SearchController::class,'search'])->name('pages.seearch');
 
+Route::get('/pages/viandes-non-atteints-mrlc/{slug}', [PageController::class,'viandesNonAtteintsMrlc'])->name('pages.viandes.non.atteints.mrlc');
+Route::get('/pages/viandes-non-atteints-mrlc/show/{slug}', [PageController::class,'shownonviandesAtteintsMrlc'])->name('show.viandes.non.atteints.mrlc');
+
+Route::get('/pages/carcasse/{slug}', [PageController::class,'carcasse'])->name('pages.carcasse');
+Route::get('/pages/carcasse/show/{slug}', [PageController::class,'showcarcasse'])->name('show.carcasse');
+
+Route::get('/pages/cinquieme-quartier/{slug}', [PageController::class,'cinquiemequartier'])->name('pages.cinquiemequartier');
+Route::get('/pages/cinquieme-quartier/show/{slug}', [PageController::class,'showcinquiemequartier'])->name('show.cinquiemequartier');
+
+Route::get('/pages/viandes-dangereuses/{slug}', [PageController::class,'viandesDangereuses'])->name('pages.viandes.dangereuses');
+Route::get('/pages/viandes-dangereuses/show/{slug}', [PageController::class,'showviandesDangereuses'])->name('show.viandes.dangereuses');
+
+
 // login
 Route::get('login', [LoginController::class, 'login'])->name('login');
 Route::post('login', [LoginController::class, 'login_action'])->name('login.action');

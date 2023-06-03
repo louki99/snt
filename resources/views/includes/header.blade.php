@@ -180,14 +180,14 @@
                                 <li><a class="link" href="#">Viandes virulentes</a>
                                     <ul class="sbm">
                                         <li><a class="link" href="{{ route("pages.viandes.atteints.mrlc","viandes-issues-danimaux-atteints-de-mrlc") }}">Viandes issues d'animaux atteints de MRLC</a></li>
-                                        <li><a class="link" href="#">Viandes issues d'animaux non atteints de MRLC</a></li>
+                                        <li><a class="link" href="{{ route("pages.viandes.non.atteints.mrlc","viandes-issues-danimaux-non-atteints-de-mrlc") }}">Viandes issues d'animaux non atteints de MRLC</a></li>
                                         <li><a class="link" href="#">Affections parasitaires</a>
                                             <ul class="sbm">
-                                                <li><a class="link" href="#">La carcasse</a></li>
-                                                <li><a class="link" href="#">Le 5ème quartier</a></li>
+                                                <li><a class="link" href="{{ route("pages.carcasse","la-carcasse") }}">La carcasse</a></li>
+                                                <li><a class="link" href="{{ route("pages.cinquiemequartier","le-5eme-quartier") }}">Le 5ème quartier</a></li>
                                             </ul>
                                         </li>
-                                        <li><a class="link" href="#">Viandes dangereuses</a></li>
+                                        <li><a class="link" href="{{ route("pages.viandes.dangereuses","viandes-dangereuses") }}">Viandes dangereuses</a></li>
                                     </ul>
                                 </li>
 
