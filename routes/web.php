@@ -121,6 +121,10 @@ Route::group(['middleware' => ['auth:sanctum']], function() {
 
             Route::post('/update', [PageController::class,'update'])->name('pages.update');
 
+            Route::get('/delete/{slug}', [PageController::class,'confirmation'])->name('pages.confirmation');
+
+            Route::delete('/delete/{slug}', [PageController::class,'delete'])->name('pages.delete');
+
             Route::get('/images/edit/{slug}', [ImageController::class,'editImage'])->name('pages.images.edit');
             Route::get('/images/remove/{id}', [ImageController::class,'removeImage'])->name('pages.images.remove');
 

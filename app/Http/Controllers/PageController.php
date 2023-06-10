@@ -366,4 +366,22 @@ class PageController extends Controller
         return $menu;
     }
 
+    public function confirmation(Request $request,$slug) {
+
+        return view("backend.pages.delete",['slug'=>$slug]);
+    }
+
+    public function delete($slug) {
+
+        $page = Page::where("slug",$slug)->get();
+
+        if(count($page) == 1) {
+            $page[0]->delete();
+
+            return redirect()->route('list.pages')->with('success', 'Page deleted successfully.');
+        }
+
+        return Redirect::back()->with('errot', 'Can not delete this page');
+    }
+
 }
