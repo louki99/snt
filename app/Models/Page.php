@@ -45,5 +45,18 @@ class Page extends Model implements HasMedia
     }
 
 
+    public function getImagesByModule(string $moduleName)
+    {
+        // Retrieve media items from a specific module
+        $mediaItems = $this->getMedia($moduleName);
+
+        // Access the URLs of the media items
+        // $imageUrls = $mediaItems->map(function ($media) {
+        //     return $media->getUrl();
+        // });
+
+        return $mediaItems;
+    }
+
 
 }

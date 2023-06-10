@@ -8,6 +8,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ImageController;
 
 
 /*
@@ -95,6 +96,7 @@ Route::get('/pages/viandes-dangereuses/{slug}', [PageController::class,'viandesD
 Route::get('/pages/viandes-dangereuses/show/{slug}', [PageController::class,'showviandesDangereuses'])->name('show.viandes.dangereuses');
 
 
+
 // login
 Route::get('login', [LoginController::class, 'login'])->name('login');
 Route::post('login', [LoginController::class, 'login_action'])->name('login.action');
@@ -118,6 +120,11 @@ Route::group(['middleware' => ['auth:sanctum']], function() {
             Route::get('/list', [PageController::class,'indexDash'])->name('list.pages');
 
             Route::post('/update', [PageController::class,'update'])->name('pages.update');
+
+            Route::get('/images/edit/{slug}', [ImageController::class,'editImage'])->name('pages.images.edit');
+            Route::get('/images/remove/{id}', [ImageController::class,'removeImage'])->name('pages.images.remove');
+
+            Route::post('/images/add/{id}', [ImageController::class,'addImages'])->name('pages.images.add');
 
         });
 
